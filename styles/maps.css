@@ -1,0 +1,13 @@
+.tableOfTolls {
+	margin-top: 10px;
+	margin-left: 25px;
+}
+
+.title {
+	padding-left: 25px;
+	font-weight: bold;
+}
+
+.tollTableCheckbox {
+	text-align: center;
+}
