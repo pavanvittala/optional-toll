@@ -1,0 +1,35 @@
+
+h1{
+    text-align:center;
+    color:#c0c0c0;
+    font-family:"Times New Roman", Times, serif;
+    font-weight:bold;
+
+}
+.backgroundImage{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -9999;
+    background-image:url("../img/bg_buildings.jpg");
+}
+body{
+    margin-top: 150px;
+    text-align:center;
+    font-weight:bold;
+    font-size:32px;
+    color:#b22222;
+
+
+}
+
+.p1{
+    font-size: 24px;
+}
+.div1 {
+    float: left;
+    width: 200px;
+    height: 800px;
+    margin-right: -200px;
+    border: 3px solid black;
+}
