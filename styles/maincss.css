@@ -46,6 +46,7 @@ li a:hover {
 
 body{
     background-image: url("../img/bg_buildings.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: fixed;
