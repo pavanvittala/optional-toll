@@ -1,1 +1,53 @@
-Hello World
+<!--Main page of our website. From here you can login, create an account, search the map (from this page itself), or go directly to the map.-->
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/maincss.css">
+    <title>Better Toll System for Google Maps</title>
+</head>
+
+
+<body>
+<nav>
+    <ul>
+        <li><a class="active" href="index.html">Startup</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="dataEntry.html">Create Account</a></li>
+    </ul>
+</nav>
+<h1>Optio-Toll</h1>
+Find the best route choosing only the tolls you are willing to pay for
+
+<section class ="div1">
+    <form action>
+        Login:
+        <br>
+        <input type = "text" name="username" placeholder="Username">
+        <br>
+        <input type="text" name="password" placeholder="Password">
+        <br>
+        <input type = "submit" value = "Login">
+    </form>
+</section>
+
+<div class="earth">
+    <img src="img/Globe.png" alt ="World" style="width:128px;height:128px;">
+</div>
+
+<h3 class="addressEntry">Address Entry</h3>
+
+<form action="map.html">
+    <label>
+        Starting Point:<br>
+        <input type="text" name="starting point" placeholder="Starting Address">
+        <br></label>
+    <label>
+        Destination:<br>
+        <input type="text" name="ending point" placeholder="Destination Address">
+    </label>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
