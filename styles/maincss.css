@@ -1,4 +1,4 @@
-
+/*Styles for the index.html page*/
 h1{
     text-align:center;
     color:#c0c0c0;
@@ -40,9 +40,6 @@ li a:hover {
 .active {
     background-color: dodgerblue;
 }
-
-
-
 
 body{
     background-image: url("../img/bg_buildings.jpg");

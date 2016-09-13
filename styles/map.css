@@ -1,8 +1,49 @@
 /*Pavan Vittala*/
 /*Styles for map.html*/
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    z-index: 9999;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: dodgerblue;
+}
+
 .tableOfTolls {
-    position: absolute;
-	right: 20px;
+    position: relative;
+	/*right: 20px;*/
+    top: 60px;
     padding-left: 10px;
     padding-right:10px;
     padding-top: 5px;
@@ -24,15 +65,16 @@
 }
 
 .addressInput {
-	position: absolute;
-	left: 20px;
+	position: relative;
+	/*left: 20px;*/
+    top: 60px;
 	padding-top: 10px;
     padding-left: 10px;
     padding-right:10px;
     padding-bottom: 10px;
     margin-top: 10px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-bottom: 10px;
     border: medium solid black;
     border-radius: 5px;
@@ -70,40 +112,4 @@ footer:a:hover {
 	right: 0;
     padding-bottom: 5px;
     padding-right: 5px;
-}
-
-nav {
-    z-index: 9999;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
-.active {
-    background-color: dodgerblue;
 }
