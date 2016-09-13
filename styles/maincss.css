@@ -1,13 +1,7 @@
 /*Styles for the index.html page*/
-h1{
-    text-align:center;
-    color:#c0c0c0;
-    font-family:"Times New Roman", Times, serif;
-    font-weight:bold;
-
-}
 
 nav {
+    width: 99%;
     z-index: 9999;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -41,14 +35,22 @@ li a:hover {
     background-color: dodgerblue;
 }
 
-body{
+h1{
+    text-align:center;
+    color:#c0c0c0;
+    font-family:"Times New Roman", Times, serif;
+    font-weight:bold;
+
+}
+
+body {  
     background-image: url("../img/bg_buildings.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: fixed;
     text-align:center;
-    font-weight:bold;
+    /*font-weight:bold;*/
     color:#b22222;
 
 
@@ -68,4 +70,9 @@ body{
 h1:hover{
     transition: color 0.5s ease;
     color: aqua;
+}
+
+.addressEntry {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

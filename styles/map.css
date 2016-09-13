@@ -4,7 +4,7 @@
 nav {
     position: fixed;
     top: 0;
-    width: 98%;
+    width: 99%;
     z-index: 9999;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -101,14 +101,14 @@ footer:a:hover {
 .tollSource {
 	position: fixed;
 	bottom: 0;
-	left: 0;
+    left: 0;
     padding-bottom: 5px;
     padding-left: 5px;
 }
 
 .contactInfo {
 	position: fixed;
-	bottom: 0;
+    bottom: 0;
 	right: 0;
     padding-bottom: 5px;
     padding-right: 5px;
