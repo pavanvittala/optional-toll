@@ -113,3 +113,13 @@ footer:a:hover {
     padding-bottom: 5px;
     padding-right: 5px;
 }
+
+#show-hide-button-address {
+    position: relative;
+    top: 60px;
+}
+
+#show-hide-button-tolls {
+    position: relative;
+	top: 60px;
+}

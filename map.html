@@ -1,52 +1,55 @@
 <!--Pavan Vittala-->
 <!--This HTML document is the page where the main part of our project will reside. This is the page with the map-->
 <!--and also the page with the information about what tolls are near you.-->
-
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Better Toll System for Google Maps</title>
     <link href="styles/map.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <script type="text/javascript" src="scripts/map.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/map.js"></script>
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        position: fixed;
-        top: 60px;
-
-        height: 50%;
-      }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: fixed;
+            top: 60px;
+            height: 50%;
+            margin-bottom: 5px;
+        }
     </style>
-  </head>
-  <body>
-  <nav>
+</head>
+<body>
+<nav>
     <ul>
-      <li><a href="index.html">Startup</a></li>
-      <li><a class="active" href="map.html">Map</a></li>
-      <li><a href="dataEntry.html">Create Account</a></li>
+        <li><a href="index.html">Startup</a></li>
+        <li><a class="active" href="map.html">Map</a></li>
+        <li><a href="dataEntry.html">Create Account</a></li>
     </ul>
-  </nav>
-    <div id="map"></div>
-    <script>
-      var map;
-      function initMap() {
+</nav>
+<div id="map"></div>
+<script>
+    var map;
+    function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 0, lng: 0},
-          zoom: 2
+            center: {lat: 0, lng: 0},
+            zoom: 2
         });
-      }
-    </script>
-    <section class="addressInput">
-      <div class="addressTitle">
+    }
+</script>
+<div id="addressEncap">
+    <div id="show-hide-button-address">
+        <input type="button" value="Hide Directions" id="hideAddress">
+    </div>
+    <section class="addressInput" id="addressInput">
+        <div class="addressTitle">
             Enter Here for Directions:
-      </div>
+        </div>
         <form>
             From Address:<br>
             <input type="text" name="From Address" placeholder="From"><br><br>
@@ -56,80 +59,86 @@
         <br>
         <input type="submit" name="submit" placeholder="Submit">
     </section>
-    <!--This table system is just a placeholder. In reality, there could be more than 4 tolls around a person to choose from.-->
-    <!--We just didn't know how to implement having an arbitrarily large number of tolls displayed via HTML.-->
-    <section class="tableOfTolls">
-      <div class="numTollsVisible">
-        Number of Tolls Visible
-        <input type="number" name="quantity" min="1" max="4" value="4"  id="numTolls">
-      </div>
-      <div class="tollCost">
-        Toll Cost Threshold
-        <input type="text" placeholder="Cost" pattern="[0-9]+">
-      </div>
-      <div class="reloadTolls" id="refreshButton">
-        <input type="button" value="Refresh">
-      </div>
-      <script>document.getElementById("refreshButton").addEventListener("click", refreshTable)</script>
-      <div class="tollTitle">
-        <p>Tolls Available:</p>
-      </div>
-    	<table border="1" width="500" height="250" id="tolltable">
-        <tr>
-          <th>Toll</th>
-          <th>Price</th>
-          <th>Use Toll</th>
-        </tr>
-    		<tr>  
-    			<td>Placeholder</td>
-    			<td>Placeholder</td>
-          <td>
-            <div class="tollTableCheckbox">
-              <input type="checkbox" checked="checked"/>
-            </div>
-          </td>
-    		</tr>
-    		<tr>
-    			<td>Placeholder</td>
-    			<td>Placeholder</td>
-          <td>
-            <div class="tollTableCheckbox">
-              <input type="checkbox" checked="checked"/>
-            </div>
-          </td>
-    		</tr>
-        <tr>
-          <td>Placeholder</td>
-          <td>Placeholder</td>
-          <td>
-            <div class="tollTableCheckbox">
-              <input type="checkbox" checked="checked"/>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Placeholder</td>
-          <td>Placeholder</td>
-          <td>
-            <div class="tollTableCheckbox">
-              <input type="checkbox" checked="checked"/>
-            </div>
-          </td>
-        </tr>
-   		</table>
-   	</section>
-    <div class="tollSource">
-        <footer>
-          <a href="https://developer.here.com/platform-extensions/documentation/toll-cost">Source for Toll Data</a>
-        </footer>
+</div>
+<!--This table system is just a placeholder. In reality, there could be more than 4 tolls around a person to choose from.-->
+<!--We just didn't know how to implement having an arbitrarily large number of tolls displayed via HTML.-->
+<div id="tableEncap">
+    <div id="show-hide-button-tolls">
+        <input type="button" value="Hide Tolls" id="hideTolls">
     </div>
-    <div class="contactInfo">
-      <footer>
+    <section class="tableOfTolls" id="tableOfTolls">
+        <div class="numTollsVisible">
+            Number of Tolls Visible
+            <input type="number" name="quantity" min="1" max="4" value="4"  id="numTolls">
+        </div>
+        <div class="tollCost">
+            Toll Cost Threshold
+            <input type="text" placeholder="Cost" pattern="[0-9]+">
+        </div>
+        <div class="reloadTolls" id="refreshButton">
+            <input type="button" value="Refresh">
+        </div>
+        <script>document.getElementById("refreshButton").addEventListener("click", refreshTable)</script>
+        <div class="tollTitle">
+            <p>Tolls Available:</p>
+        </div>
+        <table border="1" width="500" height="250" id="tolltable">
+            <tr>
+                <th>Toll</th>
+                <th>Price</th>
+                <th>Use Toll</th>
+            </tr>
+            <tr>
+                <td>Placeholder</td>
+                <td>Placeholder</td>
+                <td>
+                    <div class="tollTableCheckbox">
+                        <input type="checkbox" checked="checked"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Placeholder</td>
+                <td>Placeholder</td>
+                <td>
+                    <div class="tollTableCheckbox">
+                        <input type="checkbox" checked="checked"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Placeholder</td>
+                <td>Placeholder</td>
+                <td>
+                    <div class="tollTableCheckbox">
+                        <input type="checkbox" checked="checked"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Placeholder</td>
+                <td>Placeholder</td>
+                <td>
+                    <div class="tollTableCheckbox">
+                        <input type="checkbox" checked="checked"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+</div>
+<div class="tollSource">
+    <footer>
+        <a href="https://developer.here.com/platform-extensions/documentation/toll-cost">Source for Toll Data</a>
+    </footer>
+</div>
+<div class="contactInfo">
+    <footer>
         Developer Contact Info:<br>
         <a href="mailto:avittala@gmu.edu">avittala@gmu.edu</a><br><a href="mailto:kmatsuda@gmu.edu">kmatsuda@gmu.edu</a>
-      </footer>
-    </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUW63ts7lSOZef6JbzeLyvZ7RmTaIxLK0&callback=initMap"
-    async defer></script>
-  </body>
+    </footer>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUW63ts7lSOZef6JbzeLyvZ7RmTaIxLK0&callback=initMap"
+        async defer></script>
+</body>
 </html>
