@@ -40,3 +40,33 @@ function refreshTable() {
         }
     }
 }
+
+//Shows/hides address input tab for directions
+$(document).ready(function(){
+    $("#show-hide-button-address").click(function(){
+        var button = document.getElementById("hideAddress");
+        if (button.value == "Hide Directions") {
+            $("#addressInput").hide();
+            button.value = "Show Directions";
+            history.pushState(null, null, "map.html");
+        } else if (button.value == "Show Directions") {
+            $("#addressInput").show();
+            button.value = "Hide Directions";
+            history.pushState(null, null, "map.html");
+        }
+    });
+});
+
+//Shows/hides toll data tab
+$(document).ready(function(){
+    $("#show-hide-button-tolls").click(function(){
+        var button = document.getElementById("hideTolls");
+        if (button.value == "Hide Tolls") {
+            $("#tableOfTolls").hide();
+            button.value = "Show Tolls";
+        } else if (button.value == "Show Tolls") {
+            $("#tableOfTolls").show();
+            button.value = "Hide Tolls";
+        }
+    });
+});
