@@ -4,6 +4,7 @@
 
 //Function that changes the number of tolls displayed in the toll table.
 function refreshTable() {
+    var defaultTollNumber = $('#tableOfTolls').data('default');
     var numTolls = document.getElementById("numTolls").value;   //New number of rows you want
     var table = document.getElementById("tolltable");   //Save the table object on the page
     var tableNumRows = table.rows.length-1;   //Number of rows actually there, -1 because we have a label row
@@ -11,7 +12,9 @@ function refreshTable() {
     console.log("Number of rows you want: ");console.log(numTolls);
     console.log("Number of rows you have: ");console.log(tableNumRows);
     */
-    if (numTolls < tableNumRows) {  //Decrease the number of rows
+    if (numTolls > defaultTollNumber) {
+        alert("A maximum of 4 tolls can be displayed at once");
+    } else if (numTolls < tableNumRows) {  //Decrease the number of rows
         var tableCreation = tableNumRows-numTolls;
         for (var i = 0; i<tableCreation; i++) {
             table.deleteRow(-1);    //Delete the row, the -1 paramater deletes the last row of the table

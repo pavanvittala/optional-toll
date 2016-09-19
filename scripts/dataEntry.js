@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 function inputValidationView(reference, listOfData) {
     var panel = document.getElementById("inputPanel");
-    history.pushState(panel.firstChild, "RevertingView");
+    history.pushState(panel.innerHTML, "RevertingView");
     var body = document.body;
     var table = document.createElement("table");
     table.style.border = "1px solid black";
@@ -56,6 +56,6 @@ function inputValidationView(reference, listOfData) {
 window.addEventListener('popstate', function(event) {
     var state = event.state; 
     console.log(state);
-    document.getElementById("inputPanel") = state;
+    //document.getElementById("inputPanel") = state;
     
 });
