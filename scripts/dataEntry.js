@@ -52,6 +52,7 @@ function inputValidationView(reference, listOfData) {
     window.alert("This feature is not yet complete... Check back soon!");
 }
 
+/*
 //dataInputValidationPanelView
 window.addEventListener('popstate', function(event) {
     var state = event.state; 
@@ -59,3 +60,4 @@ window.addEventListener('popstate', function(event) {
     //document.getElementById("inputPanel") = state;
     
 });
+*/
