@@ -2,19 +2,21 @@
 /**
  * Created by Ken on 9/19/2016.
  */
-function welcomeUser(){
-    //var welcome = document.createTextNode("Welcome ");
-    //var welcome = document.getElementById("loginmessage");
-    //var nameinput = document.createElement("name");
-    //var name = document.createTextNode(username);
-    //document.getElementById("loginmessage").appendChild(name);
-
-    var welcomeDiv = document.getElementById("loginmessage");
-    
-}
-
-
 $(document).ready(function(){
+    $("#submitButton").click(function() {
+        var welcome = document.createTextNode("Welcome ");
+        document.getElementById("loginmessage").appendChild(welcome);
+        UserV = document.getElementById("User");
+        var name = document.createTextNode(UserV.value);
+        wel.appendchild(name);
+        document.getElementById("loginmessage").appendChild(wel);
+
+        //var welcomeDiv = document.getElementById("loginmessage");
+    });
+});
+
+
+/*$(document).ready(function(){
     $("#submitButton").click(function(){
         var welcomeDiv = document.getElementById("loginMessage");
         welcomeDiv.value = "Welcome fuckers";
@@ -35,5 +37,3 @@ $(document).ready(function(){
             window.alert("Please fill in all the text boxes");
         }
         */
-    });
-});
