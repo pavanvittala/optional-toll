@@ -2,7 +2,6 @@
 $(document).ready(function() {
     $("#submit-data").click(function(){
         var panel = document.getElementById("inputPanel");
-        history.pushState({{"state1":1, "data":panel.innerHTML}}, "default");
         var firstName = document.getElementById("first-name");
         var lastName = document.getElementById("last-name");
         var email = document.getElementById("email-address");
@@ -38,9 +37,10 @@ function inputValidationView(reference, listOfData) {
         }
     }
     var input = document.getElementById("input");
+    history.pushState({"state1":1, "data":panel.innerHTML}, "dataView", "?view=dataView");
     history.pushState({"state2":2, "data":panel.innerHTML}, "dataView", "?view=dataView");
     panel.removeChild(input);
-    table.marginTop = "25px";
+    table.marginTop = "100px";
     table.marginBottom = "100px";
     table.marginLeft = "100px";
     table.marginRight = "100px";
@@ -50,15 +50,13 @@ function inputValidationView(reference, listOfData) {
     title.appendChild(document.createTextNode("Your Information: "));
     panel.appendChild(title);
     panel.appendChild(table);
-    window.alert("This feature is not yet complete... Check back soon!");
+    window.alert("This feature is not yet complete... Check back soon! But here's your information for you!");
 }
 
 //dataInputValidationPanelView
 window.addEventListener('popstate', function(event) {
-    //var state = event.originalEvent.state;
     event.preventDefault();
     var state = event.state;
-    //console.log(state.data);
     var panel = document.getElementById("inputPanel");
     panel.innerHTML = state.data;
 });
