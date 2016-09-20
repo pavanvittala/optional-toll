@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles/maincss.css">
     <title>Better Toll System for Google Maps</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
 </head>
 
 
@@ -20,17 +21,16 @@
 Find the best route choosing only the tolls you are willing to pay for
 
 <section class ="div1">
-    <form action>
         Login:
         <br>
-        <input type = "text" name="username" placeholder="Username">
+        <input id="User" type = "text" name="Email Address" placeholder="Email Address">
         <br>
-        <input type="text" name="password" placeholder="Password">
+        <input id="Password" type="password" name="password" placeholder="Password">
         <br>
-        <input type = "submit" value = "Login">
-    </form>
-</section>
+        <input type = "submit" value = "Login" id="submitButton">
 
+    <p id="loginmessage"></p>
+</section>
 <div class="earth">
     <img src="img/Globe.png" alt ="World" style="width:128px;height:128px;">
 </div>
@@ -51,4 +51,5 @@ Find the best route choosing only the tolls you are willing to pay for
 </form>
 
 </body>
+
 </html>
