@@ -6,10 +6,10 @@ $(document).ready(function(){
     $("#submitButton").click(function() {
         var welcome = document.createTextNode("Welcome ");
         document.getElementById("loginmessage").appendChild(welcome);
-        UserV = document.getElementById("User");
+        var UserV = document.getElementById("User");
         var name = document.createTextNode(UserV.value);
-        wel.appendchild(name);
-        document.getElementById("loginmessage").appendChild(wel);
+        //wel.appendchild(name);
+        document.getElementById("loginmessage").appendChild(name);
 
         //var welcomeDiv = document.getElementById("loginmessage");
     });
