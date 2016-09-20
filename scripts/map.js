@@ -1,6 +1,7 @@
 /**
  * Created by PavanVittala on 9/15/16.
  */
+//Scripts for map.html
 
 //Function that changes the number of tolls displayed in the toll table.
 $(document).ready(function() {
@@ -53,11 +54,11 @@ $(document).ready(function(){
         if (button.value == "Hide Directions") {
             $("#addressInput").hide();
             button.value = "Show Directions";
-            history.pushState(null, null, "map.html");
+            //history.pushState(null, null, "map.html");
         } else if (button.value == "Show Directions") {
             $("#addressInput").show();
             button.value = "Hide Directions";
-            history.pushState(null, null, "map.html");
+            //history.pushState(null, null, "map.html");
         }
     });
 });
