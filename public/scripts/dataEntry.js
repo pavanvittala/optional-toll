@@ -26,10 +26,10 @@ function inputValidationView(listOfData) {
     var userObject = {"First Name":listOfData[0], "Last Name":listOfData[1], "Email":listOfData[2], "Password":listOfData[3]};
     var users = firebase.database().ref("users");
     //1. Add info to database, if not already in there
-    //users.push(userObject);
+    users.push(userObject);
     
     //2. Redirect to home page
-    //location.href = "index.html";
+    location.href = "index.html";
 
     //history.pushState(panel.innerHTML, "RevertingView");
     /*
