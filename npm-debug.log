@@ -1,0 +1,1143 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'cache', 'clean' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 silly ls normalized .
+5 silly gentlyRm /Users/PavanVittala/.npm/_locks is being purged
+6 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/_locks
+7 silly gentlyRm /Users/PavanVittala/.npm/accepts is being purged
+8 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/accepts
+9 silly gentlyRm /Users/PavanVittala/.npm/ansi-align is being purged
+10 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ansi-align
+11 silly gentlyRm /Users/PavanVittala/.npm/ansi-escapes is being purged
+12 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ansi-escapes
+13 silly gentlyRm /Users/PavanVittala/.npm/ansi-regex is being purged
+14 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ansi-regex
+15 silly gentlyRm /Users/PavanVittala/.npm/ansi-styles is being purged
+16 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ansi-styles
+17 silly gentlyRm /Users/PavanVittala/.npm/archiver is being purged
+18 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/archiver
+19 silly gentlyRm /Users/PavanVittala/.npm/array-flatten is being purged
+20 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/array-flatten
+21 silly gentlyRm /Users/PavanVittala/.npm/as-array is being purged
+22 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/as-array
+23 silly gentlyRm /Users/PavanVittala/.npm/asn1 is being purged
+24 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/asn1
+25 silly gentlyRm /Users/PavanVittala/.npm/assert-plus is being purged
+26 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/assert-plus
+27 silly gentlyRm /Users/PavanVittala/.npm/async is being purged
+28 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/async
+29 silly gentlyRm /Users/PavanVittala/.npm/asynckit is being purged
+30 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/asynckit
+31 silly gentlyRm /Users/PavanVittala/.npm/aws-sign2 is being purged
+32 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/aws-sign2
+33 silly gentlyRm /Users/PavanVittala/.npm/aws4 is being purged
+34 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/aws4
+35 silly gentlyRm /Users/PavanVittala/.npm/balanced-match is being purged
+36 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/balanced-match
+37 silly gentlyRm /Users/PavanVittala/.npm/base64-url is being purged
+38 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/base64-url
+39 silly gentlyRm /Users/PavanVittala/.npm/base64url is being purged
+40 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/base64url
+41 silly gentlyRm /Users/PavanVittala/.npm/basic-auth is being purged
+42 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/basic-auth
+43 silly gentlyRm /Users/PavanVittala/.npm/basic-auth-connect is being purged
+44 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/basic-auth-connect
+45 silly gentlyRm /Users/PavanVittala/.npm/bcrypt-pbkdf is being purged
+46 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/bcrypt-pbkdf
+47 silly gentlyRm /Users/PavanVittala/.npm/bl is being purged
+48 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/bl
+49 silly gentlyRm /Users/PavanVittala/.npm/block-stream is being purged
+50 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/block-stream
+51 silly gentlyRm /Users/PavanVittala/.npm/bluebird is being purged
+52 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/bluebird
+53 silly gentlyRm /Users/PavanVittala/.npm/boom is being purged
+54 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/boom
+55 silly gentlyRm /Users/PavanVittala/.npm/boxen is being purged
+56 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/boxen
+57 silly gentlyRm /Users/PavanVittala/.npm/brace-expansion is being purged
+58 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/brace-expansion
+59 silly gentlyRm /Users/PavanVittala/.npm/buffer-crc32 is being purged
+60 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/buffer-crc32
+61 silly gentlyRm /Users/PavanVittala/.npm/buffer-equal-constant-time is being purged
+62 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/buffer-equal-constant-time
+63 silly gentlyRm /Users/PavanVittala/.npm/buffer-shims is being purged
+64 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/buffer-shims
+65 silly gentlyRm /Users/PavanVittala/.npm/bytes is being purged
+66 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/bytes
+67 silly gentlyRm /Users/PavanVittala/.npm/camelcase is being purged
+68 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/camelcase
+69 silly gentlyRm /Users/PavanVittala/.npm/camelcase-keys is being purged
+70 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/camelcase-keys
+71 silly gentlyRm /Users/PavanVittala/.npm/capture-stack-trace is being purged
+72 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/capture-stack-trace
+73 silly gentlyRm /Users/PavanVittala/.npm/caseless is being purged
+74 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/caseless
+75 silly gentlyRm /Users/PavanVittala/.npm/chalk is being purged
+76 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/chalk
+77 silly gentlyRm /Users/PavanVittala/.npm/char-spinner is being purged
+78 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/char-spinner
+79 silly gentlyRm /Users/PavanVittala/.npm/cjson is being purged
+80 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cjson
+81 silly gentlyRm /Users/PavanVittala/.npm/cli-boxes is being purged
+82 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cli-boxes
+83 silly gentlyRm /Users/PavanVittala/.npm/cli-cursor is being purged
+84 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cli-cursor
+85 silly gentlyRm /Users/PavanVittala/.npm/cli-table is being purged
+86 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cli-table
+87 silly gentlyRm /Users/PavanVittala/.npm/cli-width is being purged
+88 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cli-width
+89 silly gentlyRm /Users/PavanVittala/.npm/code-point-at is being purged
+90 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/code-point-at
+91 silly gentlyRm /Users/PavanVittala/.npm/colors is being purged
+92 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/colors
+93 silly gentlyRm /Users/PavanVittala/.npm/combined-stream is being purged
+94 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/combined-stream
+95 silly gentlyRm /Users/PavanVittala/.npm/commander is being purged
+96 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/commander
+97 silly gentlyRm /Users/PavanVittala/.npm/compare-semver is being purged
+98 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/compare-semver
+99 silly gentlyRm /Users/PavanVittala/.npm/compress-commons is being purged
+100 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/compress-commons
+101 silly gentlyRm /Users/PavanVittala/.npm/compressible is being purged
+102 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/compressible
+103 silly gentlyRm /Users/PavanVittala/.npm/compression is being purged
+104 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/compression
+105 silly gentlyRm /Users/PavanVittala/.npm/concat-map is being purged
+106 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/concat-map
+107 silly gentlyRm /Users/PavanVittala/.npm/concat-stream is being purged
+108 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/concat-stream
+109 silly gentlyRm /Users/PavanVittala/.npm/configstore is being purged
+110 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/configstore
+111 silly gentlyRm /Users/PavanVittala/.npm/connect is being purged
+112 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/connect
+113 silly gentlyRm /Users/PavanVittala/.npm/connect-query is being purged
+114 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/connect-query
+115 silly gentlyRm /Users/PavanVittala/.npm/core-util-is is being purged
+116 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/core-util-is
+117 silly gentlyRm /Users/PavanVittala/.npm/crc32-stream is being purged
+118 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/crc32-stream
+119 silly gentlyRm /Users/PavanVittala/.npm/create-error-class is being purged
+120 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/create-error-class
+121 silly gentlyRm /Users/PavanVittala/.npm/cryptiles is being purged
+122 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cryptiles
+123 silly gentlyRm /Users/PavanVittala/.npm/ctype is being purged
+124 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ctype
+125 silly gentlyRm /Users/PavanVittala/.npm/cycle is being purged
+126 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/cycle
+127 silly gentlyRm /Users/PavanVittala/.npm/dashdash is being purged
+128 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/dashdash
+129 silly gentlyRm /Users/PavanVittala/.npm/debug is being purged
+130 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/debug
+131 silly gentlyRm /Users/PavanVittala/.npm/deep-extend is being purged
+132 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/deep-extend
+133 silly gentlyRm /Users/PavanVittala/.npm/delayed-stream is being purged
+134 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/delayed-stream
+135 silly gentlyRm /Users/PavanVittala/.npm/depd is being purged
+136 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/depd
+137 silly gentlyRm /Users/PavanVittala/.npm/destroy is being purged
+138 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/destroy
+139 silly gentlyRm /Users/PavanVittala/.npm/didyoumean is being purged
+140 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/didyoumean
+141 silly gentlyRm /Users/PavanVittala/.npm/dot-prop is being purged
+142 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/dot-prop
+143 silly gentlyRm /Users/PavanVittala/.npm/duplexer2 is being purged
+144 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/duplexer2
+145 silly gentlyRm /Users/PavanVittala/.npm/duplexify is being purged
+146 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/duplexify
+147 silly gentlyRm /Users/PavanVittala/.npm/ecc-jsbn is being purged
+148 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ecc-jsbn
+149 silly gentlyRm /Users/PavanVittala/.npm/ecdsa-sig-formatter is being purged
+150 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ecdsa-sig-formatter
+151 silly gentlyRm /Users/PavanVittala/.npm/ee-first is being purged
+152 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ee-first
+153 silly gentlyRm /Users/PavanVittala/.npm/end-of-stream is being purged
+154 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/end-of-stream
+155 silly gentlyRm /Users/PavanVittala/.npm/error-ex is being purged
+156 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/error-ex
+157 silly gentlyRm /Users/PavanVittala/.npm/escape-html is being purged
+158 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/escape-html
+159 silly gentlyRm /Users/PavanVittala/.npm/escape-string-regexp is being purged
+160 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/escape-string-regexp
+161 silly gentlyRm /Users/PavanVittala/.npm/exit-code is being purged
+162 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/exit-code
+163 silly gentlyRm /Users/PavanVittala/.npm/exit-hook is being purged
+164 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/exit-hook
+165 silly gentlyRm /Users/PavanVittala/.npm/extend is being purged
+166 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/extend
+167 silly gentlyRm /Users/PavanVittala/.npm/extsprintf is being purged
+168 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/extsprintf
+169 silly gentlyRm /Users/PavanVittala/.npm/eyes is being purged
+170 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/eyes
+171 silly gentlyRm /Users/PavanVittala/.npm/fast-url-parser is being purged
+172 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/fast-url-parser
+173 silly gentlyRm /Users/PavanVittala/.npm/faye-websocket is being purged
+174 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/faye-websocket
+175 silly gentlyRm /Users/PavanVittala/.npm/figures is being purged
+176 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/figures
+177 silly gentlyRm /Users/PavanVittala/.npm/filesize is being purged
+178 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/filesize
+179 silly gentlyRm /Users/PavanVittala/.npm/filled-array is being purged
+180 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/filled-array
+181 silly gentlyRm /Users/PavanVittala/.npm/finalhandler is being purged
+182 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/finalhandler
+183 silly gentlyRm /Users/PavanVittala/.npm/firebase is being purged
+184 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/firebase
+185 silly gentlyRm /Users/PavanVittala/.npm/firebase-tools is being purged
+186 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/firebase-tools
+187 silly gentlyRm /Users/PavanVittala/.npm/flat-arguments is being purged
+188 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/flat-arguments
+189 silly gentlyRm /Users/PavanVittala/.npm/forever-agent is being purged
+190 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/forever-agent
+191 silly gentlyRm /Users/PavanVittala/.npm/form-data is being purged
+192 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/form-data
+193 silly gentlyRm /Users/PavanVittala/.npm/fs-extra is being purged
+194 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/fs-extra
+195 silly gentlyRm /Users/PavanVittala/.npm/fs.realpath is being purged
+196 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/fs.realpath
+197 silly gentlyRm /Users/PavanVittala/.npm/fstream is being purged
+198 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/fstream
+199 silly gentlyRm /Users/PavanVittala/.npm/fstream-ignore is being purged
+200 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/fstream-ignore
+201 silly gentlyRm /Users/PavanVittala/.npm/gapitoken is being purged
+202 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/gapitoken
+203 silly gentlyRm /Users/PavanVittala/.npm/generate-function is being purged
+204 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/generate-function
+205 silly gentlyRm /Users/PavanVittala/.npm/generate-object-property is being purged
+206 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/generate-object-property
+207 silly gentlyRm /Users/PavanVittala/.npm/get-stdin is being purged
+208 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/get-stdin
+209 silly gentlyRm /Users/PavanVittala/.npm/getpass is being purged
+210 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/getpass
+211 silly gentlyRm /Users/PavanVittala/.npm/glob is being purged
+212 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/glob
+213 silly gentlyRm /Users/PavanVittala/.npm/glob-slash is being purged
+214 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/glob-slash
+215 silly gentlyRm /Users/PavanVittala/.npm/glob-slasher is being purged
+216 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/glob-slasher
+217 silly gentlyRm /Users/PavanVittala/.npm/google-auth-library is being purged
+218 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/google-auth-library
+219 silly gentlyRm /Users/PavanVittala/.npm/google-p12-pem is being purged
+220 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/google-p12-pem
+221 silly gentlyRm /Users/PavanVittala/.npm/googleapis is being purged
+222 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/googleapis
+223 silly gentlyRm /Users/PavanVittala/.npm/got is being purged
+224 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/got
+225 silly gentlyRm /Users/PavanVittala/.npm/graceful-fs is being purged
+226 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/graceful-fs
+227 silly gentlyRm /Users/PavanVittala/.npm/graceful-readlink is being purged
+228 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/graceful-readlink
+229 silly gentlyRm /Users/PavanVittala/.npm/gtoken is being purged
+230 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/gtoken
+231 silly gentlyRm /Users/PavanVittala/.npm/har-validator is being purged
+232 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/har-validator
+233 silly gentlyRm /Users/PavanVittala/.npm/has-ansi is being purged
+234 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/has-ansi
+235 silly gentlyRm /Users/PavanVittala/.npm/hawk is being purged
+236 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/hawk
+237 silly gentlyRm /Users/PavanVittala/.npm/hoek is being purged
+238 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/hoek
+239 silly gentlyRm /Users/PavanVittala/.npm/home-dir is being purged
+240 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/home-dir
+241 silly gentlyRm /Users/PavanVittala/.npm/http-signature is being purged
+242 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/http-signature
+243 silly gentlyRm /Users/PavanVittala/.npm/imurmurhash is being purged
+244 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/imurmurhash
+245 silly gentlyRm /Users/PavanVittala/.npm/indent-string is being purged
+246 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/indent-string
+247 silly gentlyRm /Users/PavanVittala/.npm/infinity-agent is being purged
+248 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/infinity-agent
+249 silly gentlyRm /Users/PavanVittala/.npm/inflight is being purged
+250 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/inflight
+251 silly gentlyRm /Users/PavanVittala/.npm/inherits is being purged
+252 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/inherits
+253 silly gentlyRm /Users/PavanVittala/.npm/ini is being purged
+254 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ini
+255 silly gentlyRm /Users/PavanVittala/.npm/inquirer is being purged
+256 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/inquirer
+257 silly gentlyRm /Users/PavanVittala/.npm/is-arrayish is being purged
+258 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-arrayish
+259 silly gentlyRm /Users/PavanVittala/.npm/is-finite is being purged
+260 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-finite
+261 silly gentlyRm /Users/PavanVittala/.npm/is-fullwidth-code-point is being purged
+262 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-fullwidth-code-point
+263 silly gentlyRm /Users/PavanVittala/.npm/is-my-json-valid is being purged
+264 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-my-json-valid
+265 silly gentlyRm /Users/PavanVittala/.npm/is-npm is being purged
+266 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-npm
+267 silly gentlyRm /Users/PavanVittala/.npm/is-obj is being purged
+268 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-obj
+269 silly gentlyRm /Users/PavanVittala/.npm/is-plain-obj is being purged
+270 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-plain-obj
+271 silly gentlyRm /Users/PavanVittala/.npm/is-property is being purged
+272 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-property
+273 silly gentlyRm /Users/PavanVittala/.npm/is-redirect is being purged
+274 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-redirect
+275 silly gentlyRm /Users/PavanVittala/.npm/is-retry-allowed is being purged
+276 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-retry-allowed
+277 silly gentlyRm /Users/PavanVittala/.npm/is-stream is being purged
+278 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-stream
+279 silly gentlyRm /Users/PavanVittala/.npm/is-typedarray is being purged
+280 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-typedarray
+281 silly gentlyRm /Users/PavanVittala/.npm/is-url is being purged
+282 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/is-url
+283 silly gentlyRm /Users/PavanVittala/.npm/isarray is being purged
+284 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/isarray
+285 silly gentlyRm /Users/PavanVittala/.npm/isstream is being purged
+286 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/isstream
+287 silly gentlyRm /Users/PavanVittala/.npm/jju is being purged
+288 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jju
+289 silly gentlyRm /Users/PavanVittala/.npm/jodid25519 is being purged
+290 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jodid25519
+291 silly gentlyRm /Users/PavanVittala/.npm/join-path is being purged
+292 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/join-path
+293 silly gentlyRm /Users/PavanVittala/.npm/jsbn is being purged
+294 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jsbn
+295 silly gentlyRm /Users/PavanVittala/.npm/json-parse-helpfulerror is being purged
+296 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/json-parse-helpfulerror
+297 silly gentlyRm /Users/PavanVittala/.npm/json-schema is being purged
+298 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/json-schema
+299 silly gentlyRm /Users/PavanVittala/.npm/json-stringify-safe is being purged
+300 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/json-stringify-safe
+301 silly gentlyRm /Users/PavanVittala/.npm/jsonfile is being purged
+302 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jsonfile
+303 silly gentlyRm /Users/PavanVittala/.npm/jsonpointer is being purged
+304 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jsonpointer
+305 silly gentlyRm /Users/PavanVittala/.npm/jsonschema is being purged
+306 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jsonschema
+307 silly gentlyRm /Users/PavanVittala/.npm/jsonwebtoken is being purged
+308 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jsonwebtoken
+309 silly gentlyRm /Users/PavanVittala/.npm/jsprim is being purged
+310 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jsprim
+311 silly gentlyRm /Users/PavanVittala/.npm/jwa is being purged
+312 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jwa
+313 silly gentlyRm /Users/PavanVittala/.npm/jws is being purged
+314 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/jws
+315 silly gentlyRm /Users/PavanVittala/.npm/klaw is being purged
+316 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/klaw
+317 silly gentlyRm /Users/PavanVittala/.npm/latest-version is being purged
+318 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/latest-version
+319 silly gentlyRm /Users/PavanVittala/.npm/lazy-req is being purged
+320 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lazy-req
+321 silly gentlyRm /Users/PavanVittala/.npm/lazystream is being purged
+322 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lazystream
+323 silly gentlyRm /Users/PavanVittala/.npm/lodash is being purged
+324 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash
+325 silly gentlyRm /Users/PavanVittala/.npm/lodash._isnative is being purged
+326 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash._isnative
+327 silly gentlyRm /Users/PavanVittala/.npm/lodash._objecttypes is being purged
+328 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash._objecttypes
+329 silly gentlyRm /Users/PavanVittala/.npm/lodash._shimkeys is being purged
+330 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash._shimkeys
+331 silly gentlyRm /Users/PavanVittala/.npm/lodash.isarguments is being purged
+332 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash.isarguments
+333 silly gentlyRm /Users/PavanVittala/.npm/lodash.isobject is being purged
+334 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash.isobject
+335 silly gentlyRm /Users/PavanVittala/.npm/lodash.keys is being purged
+336 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash.keys
+337 silly gentlyRm /Users/PavanVittala/.npm/lodash.noop is being purged
+338 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash.noop
+339 silly gentlyRm /Users/PavanVittala/.npm/lodash.values is being purged
+340 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lodash.values
+341 silly gentlyRm /Users/PavanVittala/.npm/lowercase-keys is being purged
+342 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/lowercase-keys
+343 silly gentlyRm /Users/PavanVittala/.npm/map-obj is being purged
+344 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/map-obj
+345 silly gentlyRm /Users/PavanVittala/.npm/meow is being purged
+346 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/meow
+347 silly gentlyRm /Users/PavanVittala/.npm/methods is being purged
+348 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/methods
+349 silly gentlyRm /Users/PavanVittala/.npm/mime is being purged
+350 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/mime
+351 silly gentlyRm /Users/PavanVittala/.npm/mime-db is being purged
+352 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/mime-db
+353 silly gentlyRm /Users/PavanVittala/.npm/mime-types is being purged
+354 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/mime-types
+355 silly gentlyRm /Users/PavanVittala/.npm/minimatch is being purged
+356 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/minimatch
+357 silly gentlyRm /Users/PavanVittala/.npm/minimist is being purged
+358 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/minimist
+359 silly gentlyRm /Users/PavanVittala/.npm/mkdirp is being purged
+360 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/mkdirp
+361 silly gentlyRm /Users/PavanVittala/.npm/morgan is being purged
+362 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/morgan
+363 silly gentlyRm /Users/PavanVittala/.npm/ms is being purged
+364 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/ms
+365 silly gentlyRm /Users/PavanVittala/.npm/mute-stream is being purged
+366 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/mute-stream
+367 silly gentlyRm /Users/PavanVittala/.npm/nash is being purged
+368 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/nash
+369 silly gentlyRm /Users/PavanVittala/.npm/negotiator is being purged
+370 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/negotiator
+371 silly gentlyRm /Users/PavanVittala/.npm/nested-error-stacks is being purged
+372 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/nested-error-stacks
+373 silly gentlyRm /Users/PavanVittala/.npm/node-forge is being purged
+374 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/node-forge
+375 silly gentlyRm /Users/PavanVittala/.npm/node-int64 is being purged
+376 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/node-int64
+377 silly gentlyRm /Users/PavanVittala/.npm/node-status-codes is being purged
+378 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/node-status-codes
+379 silly gentlyRm /Users/PavanVittala/.npm/node-uuid is being purged
+380 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/node-uuid
+381 silly gentlyRm /Users/PavanVittala/.npm/number-is-nan is being purged
+382 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/number-is-nan
+383 silly gentlyRm /Users/PavanVittala/.npm/oauth-sign is being purged
+384 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/oauth-sign
+385 silly gentlyRm /Users/PavanVittala/.npm/object-assign is being purged
+386 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/object-assign
+387 silly gentlyRm /Users/PavanVittala/.npm/on-finished is being purged
+388 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/on-finished
+389 silly gentlyRm /Users/PavanVittala/.npm/on-headers is being purged
+390 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/on-headers
+391 silly gentlyRm /Users/PavanVittala/.npm/once is being purged
+392 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/once
+393 silly gentlyRm /Users/PavanVittala/.npm/onetime is being purged
+394 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/onetime
+395 silly gentlyRm /Users/PavanVittala/.npm/open is being purged
+396 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/open
+397 silly gentlyRm /Users/PavanVittala/.npm/os-homedir is being purged
+398 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/os-homedir
+399 silly gentlyRm /Users/PavanVittala/.npm/os-tmpdir is being purged
+400 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/os-tmpdir
+401 silly gentlyRm /Users/PavanVittala/.npm/osenv is being purged
+402 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/osenv
+403 silly gentlyRm /Users/PavanVittala/.npm/package-json is being purged
+404 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/package-json
+405 silly gentlyRm /Users/PavanVittala/.npm/parse-json is being purged
+406 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/parse-json
+407 silly gentlyRm /Users/PavanVittala/.npm/parseurl is being purged
+408 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/parseurl
+409 silly gentlyRm /Users/PavanVittala/.npm/path-is-absolute is being purged
+410 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/path-is-absolute
+411 silly gentlyRm /Users/PavanVittala/.npm/path-to-regexp is being purged
+412 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/path-to-regexp
+413 silly gentlyRm /Users/PavanVittala/.npm/pinkie is being purged
+414 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/pinkie
+415 silly gentlyRm /Users/PavanVittala/.npm/pinkie-promise is being purged
+416 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/pinkie-promise
+417 silly gentlyRm /Users/PavanVittala/.npm/pkginfo is being purged
+418 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/pkginfo
+419 silly gentlyRm /Users/PavanVittala/.npm/portfinder is being purged
+420 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/portfinder
+421 silly gentlyRm /Users/PavanVittala/.npm/prepend-http is being purged
+422 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/prepend-http
+423 silly gentlyRm /Users/PavanVittala/.npm/process-nextick-args is being purged
+424 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/process-nextick-args
+425 silly gentlyRm /Users/PavanVittala/.npm/progress is being purged
+426 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/progress
+427 silly gentlyRm /Users/PavanVittala/.npm/punycode is being purged
+428 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/punycode
+429 silly gentlyRm /Users/PavanVittala/.npm/qs is being purged
+430 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/qs
+431 silly gentlyRm /Users/PavanVittala/.npm/rc is being purged
+432 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/rc
+433 silly gentlyRm /Users/PavanVittala/.npm/read-all-stream is being purged
+434 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/read-all-stream
+435 silly gentlyRm /Users/PavanVittala/.npm/readable-stream is being purged
+436 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/readable-stream
+437 silly gentlyRm /Users/PavanVittala/.npm/readline2 is being purged
+438 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/readline2
+439 silly gentlyRm /Users/PavanVittala/.npm/registry-auth-token is being purged
+440 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/registry-auth-token
+441 silly gentlyRm /Users/PavanVittala/.npm/registry-url is being purged
+442 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/registry-url
+443 silly gentlyRm /Users/PavanVittala/.npm/registry.npmjs.org is being purged
+444 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/registry.npmjs.org
+445 silly gentlyRm /Users/PavanVittala/.npm/repeating is being purged
+446 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/repeating
+447 silly gentlyRm /Users/PavanVittala/.npm/request is being purged
+448 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/request
+449 silly gentlyRm /Users/PavanVittala/.npm/restore-cursor is being purged
+450 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/restore-cursor
+451 silly gentlyRm /Users/PavanVittala/.npm/rimraf is being purged
+452 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/rimraf
+453 silly gentlyRm /Users/PavanVittala/.npm/router is being purged
+454 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/router
+455 silly gentlyRm /Users/PavanVittala/.npm/rsvp is being purged
+456 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/rsvp
+457 silly gentlyRm /Users/PavanVittala/.npm/run-async is being purged
+458 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/run-async
+459 silly gentlyRm /Users/PavanVittala/.npm/rx-lite is being purged
+460 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/rx-lite
+461 silly gentlyRm /Users/PavanVittala/.npm/semver is being purged
+462 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/semver
+463 silly gentlyRm /Users/PavanVittala/.npm/semver-diff is being purged
+464 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/semver-diff
+465 silly gentlyRm /Users/PavanVittala/.npm/setprototypeof is being purged
+466 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/setprototypeof
+467 silly gentlyRm /Users/PavanVittala/.npm/shelljs is being purged
+468 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/shelljs
+469 silly gentlyRm /Users/PavanVittala/.npm/slide is being purged
+470 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/slide
+471 silly gentlyRm /Users/PavanVittala/.npm/sntp is being purged
+472 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/sntp
+473 silly gentlyRm /Users/PavanVittala/.npm/sshpk is being purged
+474 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/sshpk
+475 silly gentlyRm /Users/PavanVittala/.npm/stack-trace is being purged
+476 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/stack-trace
+477 silly gentlyRm /Users/PavanVittala/.npm/statuses is being purged
+478 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/statuses
+479 silly gentlyRm /Users/PavanVittala/.npm/stream-shift is being purged
+480 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/stream-shift
+481 silly gentlyRm /Users/PavanVittala/.npm/string-length is being purged
+482 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/string-length
+483 silly gentlyRm /Users/PavanVittala/.npm/string-template is being purged
+484 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/string-template
+485 silly gentlyRm /Users/PavanVittala/.npm/string-width is being purged
+486 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/string-width
+487 silly gentlyRm /Users/PavanVittala/.npm/string_decoder is being purged
+488 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/string_decoder
+489 silly gentlyRm /Users/PavanVittala/.npm/stringstream is being purged
+490 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/stringstream
+491 silly gentlyRm /Users/PavanVittala/.npm/strip-ansi is being purged
+492 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/strip-ansi
+493 silly gentlyRm /Users/PavanVittala/.npm/strip-json-comments is being purged
+494 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/strip-json-comments
+495 silly gentlyRm /Users/PavanVittala/.npm/superstatic is being purged
+496 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/superstatic
+497 silly gentlyRm /Users/PavanVittala/.npm/supports-color is being purged
+498 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/supports-color
+499 silly gentlyRm /Users/PavanVittala/.npm/tar is being purged
+500 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/tar
+501 silly gentlyRm /Users/PavanVittala/.npm/tar-stream is being purged
+502 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/tar-stream
+503 silly gentlyRm /Users/PavanVittala/.npm/through is being purged
+504 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/through
+505 silly gentlyRm /Users/PavanVittala/.npm/timed-out is being purged
+506 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/timed-out
+507 silly gentlyRm /Users/PavanVittala/.npm/tmp is being purged
+508 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/tmp
+509 silly gentlyRm /Users/PavanVittala/.npm/tough-cookie is being purged
+510 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/tough-cookie
+511 silly gentlyRm /Users/PavanVittala/.npm/toxic is being purged
+512 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/toxic
+513 silly gentlyRm /Users/PavanVittala/.npm/try-require is being purged
+514 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/try-require
+515 silly gentlyRm /Users/PavanVittala/.npm/tunnel-agent is being purged
+516 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/tunnel-agent
+517 silly gentlyRm /Users/PavanVittala/.npm/tweetnacl is being purged
+518 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/tweetnacl
+519 silly gentlyRm /Users/PavanVittala/.npm/typedarray is being purged
+520 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/typedarray
+521 silly gentlyRm /Users/PavanVittala/.npm/underscore is being purged
+522 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/underscore
+523 silly gentlyRm /Users/PavanVittala/.npm/universal-analytics is being purged
+524 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/universal-analytics
+525 silly gentlyRm /Users/PavanVittala/.npm/unpipe is being purged
+526 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/unpipe
+527 silly gentlyRm /Users/PavanVittala/.npm/unzip-response is being purged
+528 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/unzip-response
+529 silly gentlyRm /Users/PavanVittala/.npm/update-notifier is being purged
+530 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/update-notifier
+531 silly gentlyRm /Users/PavanVittala/.npm/url-join is being purged
+532 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/url-join
+533 silly gentlyRm /Users/PavanVittala/.npm/url-parse-lax is being purged
+534 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/url-parse-lax
+535 silly gentlyRm /Users/PavanVittala/.npm/user-home is being purged
+536 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/user-home
+537 silly gentlyRm /Users/PavanVittala/.npm/util-deprecate is being purged
+538 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/util-deprecate
+539 silly gentlyRm /Users/PavanVittala/.npm/utils-merge is being purged
+540 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/utils-merge
+541 silly gentlyRm /Users/PavanVittala/.npm/uuid is being purged
+542 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/uuid
+543 silly gentlyRm /Users/PavanVittala/.npm/vary is being purged
+544 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/vary
+545 silly gentlyRm /Users/PavanVittala/.npm/verror is being purged
+546 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/verror
+547 silly gentlyRm /Users/PavanVittala/.npm/websocket-driver is being purged
+548 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/websocket-driver
+549 silly gentlyRm /Users/PavanVittala/.npm/websocket-extensions is being purged
+550 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/websocket-extensions
+551 silly gentlyRm /Users/PavanVittala/.npm/widest-line is being purged
+552 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/widest-line
+553 silly gentlyRm /Users/PavanVittala/.npm/winston is being purged
+554 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/winston
+555 silly gentlyRm /Users/PavanVittala/.npm/wrappy is being purged
+556 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/wrappy
+557 silly gentlyRm /Users/PavanVittala/.npm/write-file-atomic is being purged
+558 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/write-file-atomic
+559 silly gentlyRm /Users/PavanVittala/.npm/xdg-basedir is being purged
+560 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/xdg-basedir
+561 silly gentlyRm /Users/PavanVittala/.npm/xtend is being purged
+562 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/xtend
+563 silly gentlyRm /Users/PavanVittala/.npm/zip-stream is being purged
+564 verbose gentlyRm don't care about contents; nuking /Users/PavanVittala/.npm/zip-stream
+565 silly vacuum-fs purging /Users/PavanVittala/.npm/_locks
+566 silly vacuum-fs purging /Users/PavanVittala/.npm/accepts
+567 silly vacuum-fs purging /Users/PavanVittala/.npm/ansi-align
+568 silly vacuum-fs purging /Users/PavanVittala/.npm/ansi-escapes
+569 silly vacuum-fs purging /Users/PavanVittala/.npm/ansi-regex
+570 silly vacuum-fs purging /Users/PavanVittala/.npm/ansi-styles
+571 silly vacuum-fs purging /Users/PavanVittala/.npm/archiver
+572 silly vacuum-fs purging /Users/PavanVittala/.npm/array-flatten
+573 silly vacuum-fs purging /Users/PavanVittala/.npm/as-array
+574 silly vacuum-fs purging /Users/PavanVittala/.npm/asn1
+575 silly vacuum-fs purging /Users/PavanVittala/.npm/assert-plus
+576 silly vacuum-fs purging /Users/PavanVittala/.npm/async
+577 silly vacuum-fs purging /Users/PavanVittala/.npm/asynckit
+578 silly vacuum-fs purging /Users/PavanVittala/.npm/aws-sign2
+579 silly vacuum-fs purging /Users/PavanVittala/.npm/aws4
+580 silly vacuum-fs purging /Users/PavanVittala/.npm/balanced-match
+581 silly vacuum-fs purging /Users/PavanVittala/.npm/base64-url
+582 silly vacuum-fs purging /Users/PavanVittala/.npm/base64url
+583 silly vacuum-fs purging /Users/PavanVittala/.npm/basic-auth
+584 silly vacuum-fs purging /Users/PavanVittala/.npm/basic-auth-connect
+585 silly vacuum-fs purging /Users/PavanVittala/.npm/bcrypt-pbkdf
+586 silly vacuum-fs purging /Users/PavanVittala/.npm/bl
+587 silly vacuum-fs purging /Users/PavanVittala/.npm/block-stream
+588 silly vacuum-fs purging /Users/PavanVittala/.npm/bluebird
+589 silly vacuum-fs purging /Users/PavanVittala/.npm/boom
+590 silly vacuum-fs purging /Users/PavanVittala/.npm/boxen
+591 silly vacuum-fs purging /Users/PavanVittala/.npm/brace-expansion
+592 silly vacuum-fs purging /Users/PavanVittala/.npm/buffer-crc32
+593 silly vacuum-fs purging /Users/PavanVittala/.npm/buffer-equal-constant-time
+594 silly vacuum-fs purging /Users/PavanVittala/.npm/buffer-shims
+595 silly vacuum-fs purging /Users/PavanVittala/.npm/bytes
+596 silly vacuum-fs purging /Users/PavanVittala/.npm/camelcase
+597 silly vacuum-fs purging /Users/PavanVittala/.npm/camelcase-keys
+598 silly vacuum-fs purging /Users/PavanVittala/.npm/capture-stack-trace
+599 silly vacuum-fs purging /Users/PavanVittala/.npm/caseless
+600 silly vacuum-fs purging /Users/PavanVittala/.npm/chalk
+601 silly vacuum-fs purging /Users/PavanVittala/.npm/char-spinner
+602 silly vacuum-fs purging /Users/PavanVittala/.npm/cjson
+603 silly vacuum-fs purging /Users/PavanVittala/.npm/cli-boxes
+604 silly vacuum-fs purging /Users/PavanVittala/.npm/cli-cursor
+605 silly vacuum-fs purging /Users/PavanVittala/.npm/cli-table
+606 silly vacuum-fs purging /Users/PavanVittala/.npm/cli-width
+607 silly vacuum-fs purging /Users/PavanVittala/.npm/code-point-at
+608 silly vacuum-fs purging /Users/PavanVittala/.npm/colors
+609 silly vacuum-fs purging /Users/PavanVittala/.npm/combined-stream
+610 silly vacuum-fs purging /Users/PavanVittala/.npm/commander
+611 silly vacuum-fs purging /Users/PavanVittala/.npm/compare-semver
+612 silly vacuum-fs purging /Users/PavanVittala/.npm/compress-commons
+613 silly vacuum-fs purging /Users/PavanVittala/.npm/compressible
+614 silly vacuum-fs purging /Users/PavanVittala/.npm/compression
+615 silly vacuum-fs purging /Users/PavanVittala/.npm/concat-map
+616 silly vacuum-fs purging /Users/PavanVittala/.npm/concat-stream
+617 silly vacuum-fs purging /Users/PavanVittala/.npm/configstore
+618 silly vacuum-fs purging /Users/PavanVittala/.npm/connect
+619 silly vacuum-fs purging /Users/PavanVittala/.npm/connect-query
+620 silly vacuum-fs purging /Users/PavanVittala/.npm/core-util-is
+621 silly vacuum-fs purging /Users/PavanVittala/.npm/crc32-stream
+622 silly vacuum-fs purging /Users/PavanVittala/.npm/create-error-class
+623 silly vacuum-fs purging /Users/PavanVittala/.npm/cryptiles
+624 silly vacuum-fs purging /Users/PavanVittala/.npm/ctype
+625 silly vacuum-fs purging /Users/PavanVittala/.npm/cycle
+626 silly vacuum-fs purging /Users/PavanVittala/.npm/dashdash
+627 silly vacuum-fs purging /Users/PavanVittala/.npm/debug
+628 silly vacuum-fs purging /Users/PavanVittala/.npm/deep-extend
+629 silly vacuum-fs purging /Users/PavanVittala/.npm/delayed-stream
+630 silly vacuum-fs purging /Users/PavanVittala/.npm/depd
+631 silly vacuum-fs purging /Users/PavanVittala/.npm/destroy
+632 silly vacuum-fs purging /Users/PavanVittala/.npm/didyoumean
+633 silly vacuum-fs purging /Users/PavanVittala/.npm/dot-prop
+634 silly vacuum-fs purging /Users/PavanVittala/.npm/duplexer2
+635 silly vacuum-fs purging /Users/PavanVittala/.npm/duplexify
+636 silly vacuum-fs purging /Users/PavanVittala/.npm/ecc-jsbn
+637 silly vacuum-fs purging /Users/PavanVittala/.npm/ecdsa-sig-formatter
+638 silly vacuum-fs purging /Users/PavanVittala/.npm/ee-first
+639 silly vacuum-fs purging /Users/PavanVittala/.npm/end-of-stream
+640 silly vacuum-fs purging /Users/PavanVittala/.npm/error-ex
+641 silly vacuum-fs purging /Users/PavanVittala/.npm/escape-html
+642 silly vacuum-fs purging /Users/PavanVittala/.npm/escape-string-regexp
+643 silly vacuum-fs purging /Users/PavanVittala/.npm/exit-code
+644 silly vacuum-fs purging /Users/PavanVittala/.npm/exit-hook
+645 silly vacuum-fs purging /Users/PavanVittala/.npm/extend
+646 silly vacuum-fs purging /Users/PavanVittala/.npm/extsprintf
+647 silly vacuum-fs purging /Users/PavanVittala/.npm/eyes
+648 silly vacuum-fs purging /Users/PavanVittala/.npm/fast-url-parser
+649 silly vacuum-fs purging /Users/PavanVittala/.npm/faye-websocket
+650 silly vacuum-fs purging /Users/PavanVittala/.npm/figures
+651 silly vacuum-fs purging /Users/PavanVittala/.npm/filesize
+652 silly vacuum-fs purging /Users/PavanVittala/.npm/filled-array
+653 silly vacuum-fs purging /Users/PavanVittala/.npm/finalhandler
+654 silly vacuum-fs purging /Users/PavanVittala/.npm/firebase
+655 silly vacuum-fs purging /Users/PavanVittala/.npm/firebase-tools
+656 silly vacuum-fs purging /Users/PavanVittala/.npm/flat-arguments
+657 silly vacuum-fs purging /Users/PavanVittala/.npm/forever-agent
+658 silly vacuum-fs purging /Users/PavanVittala/.npm/form-data
+659 silly vacuum-fs purging /Users/PavanVittala/.npm/fs-extra
+660 silly vacuum-fs purging /Users/PavanVittala/.npm/fs.realpath
+661 silly vacuum-fs purging /Users/PavanVittala/.npm/fstream
+662 silly vacuum-fs purging /Users/PavanVittala/.npm/fstream-ignore
+663 silly vacuum-fs purging /Users/PavanVittala/.npm/gapitoken
+664 silly vacuum-fs purging /Users/PavanVittala/.npm/generate-function
+665 silly vacuum-fs purging /Users/PavanVittala/.npm/generate-object-property
+666 silly vacuum-fs purging /Users/PavanVittala/.npm/get-stdin
+667 silly vacuum-fs purging /Users/PavanVittala/.npm/getpass
+668 silly vacuum-fs purging /Users/PavanVittala/.npm/glob
+669 silly vacuum-fs purging /Users/PavanVittala/.npm/glob-slash
+670 silly vacuum-fs purging /Users/PavanVittala/.npm/glob-slasher
+671 silly vacuum-fs purging /Users/PavanVittala/.npm/google-auth-library
+672 silly vacuum-fs purging /Users/PavanVittala/.npm/google-p12-pem
+673 silly vacuum-fs purging /Users/PavanVittala/.npm/googleapis
+674 silly vacuum-fs purging /Users/PavanVittala/.npm/got
+675 silly vacuum-fs purging /Users/PavanVittala/.npm/graceful-fs
+676 silly vacuum-fs purging /Users/PavanVittala/.npm/graceful-readlink
+677 silly vacuum-fs purging /Users/PavanVittala/.npm/gtoken
+678 silly vacuum-fs purging /Users/PavanVittala/.npm/har-validator
+679 silly vacuum-fs purging /Users/PavanVittala/.npm/has-ansi
+680 silly vacuum-fs purging /Users/PavanVittala/.npm/hawk
+681 silly vacuum-fs purging /Users/PavanVittala/.npm/hoek
+682 silly vacuum-fs purging /Users/PavanVittala/.npm/home-dir
+683 silly vacuum-fs purging /Users/PavanVittala/.npm/http-signature
+684 silly vacuum-fs purging /Users/PavanVittala/.npm/imurmurhash
+685 silly vacuum-fs purging /Users/PavanVittala/.npm/indent-string
+686 silly vacuum-fs purging /Users/PavanVittala/.npm/infinity-agent
+687 silly vacuum-fs purging /Users/PavanVittala/.npm/inflight
+688 silly vacuum-fs purging /Users/PavanVittala/.npm/inherits
+689 silly vacuum-fs purging /Users/PavanVittala/.npm/ini
+690 silly vacuum-fs purging /Users/PavanVittala/.npm/inquirer
+691 silly vacuum-fs purging /Users/PavanVittala/.npm/is-arrayish
+692 silly vacuum-fs purging /Users/PavanVittala/.npm/is-finite
+693 silly vacuum-fs purging /Users/PavanVittala/.npm/is-fullwidth-code-point
+694 silly vacuum-fs purging /Users/PavanVittala/.npm/is-my-json-valid
+695 silly vacuum-fs purging /Users/PavanVittala/.npm/is-npm
+696 silly vacuum-fs purging /Users/PavanVittala/.npm/is-obj
+697 silly vacuum-fs purging /Users/PavanVittala/.npm/is-plain-obj
+698 silly vacuum-fs purging /Users/PavanVittala/.npm/is-property
+699 silly vacuum-fs purging /Users/PavanVittala/.npm/is-redirect
+700 silly vacuum-fs purging /Users/PavanVittala/.npm/is-retry-allowed
+701 silly vacuum-fs purging /Users/PavanVittala/.npm/is-stream
+702 silly vacuum-fs purging /Users/PavanVittala/.npm/is-typedarray
+703 silly vacuum-fs purging /Users/PavanVittala/.npm/is-url
+704 silly vacuum-fs purging /Users/PavanVittala/.npm/isarray
+705 silly vacuum-fs purging /Users/PavanVittala/.npm/isstream
+706 silly vacuum-fs purging /Users/PavanVittala/.npm/jju
+707 silly vacuum-fs purging /Users/PavanVittala/.npm/jodid25519
+708 silly vacuum-fs purging /Users/PavanVittala/.npm/join-path
+709 silly vacuum-fs purging /Users/PavanVittala/.npm/jsbn
+710 silly vacuum-fs purging /Users/PavanVittala/.npm/json-parse-helpfulerror
+711 silly vacuum-fs purging /Users/PavanVittala/.npm/json-schema
+712 silly vacuum-fs purging /Users/PavanVittala/.npm/json-stringify-safe
+713 silly vacuum-fs purging /Users/PavanVittala/.npm/jsonfile
+714 silly vacuum-fs purging /Users/PavanVittala/.npm/jsonpointer
+715 silly vacuum-fs purging /Users/PavanVittala/.npm/jsonschema
+716 silly vacuum-fs purging /Users/PavanVittala/.npm/jsonwebtoken
+717 silly vacuum-fs purging /Users/PavanVittala/.npm/jsprim
+718 silly vacuum-fs purging /Users/PavanVittala/.npm/jwa
+719 silly vacuum-fs purging /Users/PavanVittala/.npm/jws
+720 silly vacuum-fs purging /Users/PavanVittala/.npm/klaw
+721 silly vacuum-fs purging /Users/PavanVittala/.npm/latest-version
+722 silly vacuum-fs purging /Users/PavanVittala/.npm/lazy-req
+723 silly vacuum-fs purging /Users/PavanVittala/.npm/lazystream
+724 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash
+725 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash._isnative
+726 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash._objecttypes
+727 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash._shimkeys
+728 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash.isarguments
+729 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash.isobject
+730 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash.keys
+731 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash.noop
+732 silly vacuum-fs purging /Users/PavanVittala/.npm/lodash.values
+733 silly vacuum-fs purging /Users/PavanVittala/.npm/lowercase-keys
+734 silly vacuum-fs purging /Users/PavanVittala/.npm/map-obj
+735 silly vacuum-fs purging /Users/PavanVittala/.npm/meow
+736 silly vacuum-fs purging /Users/PavanVittala/.npm/methods
+737 silly vacuum-fs purging /Users/PavanVittala/.npm/mime
+738 silly vacuum-fs purging /Users/PavanVittala/.npm/mime-db
+739 silly vacuum-fs purging /Users/PavanVittala/.npm/mime-types
+740 silly vacuum-fs purging /Users/PavanVittala/.npm/minimatch
+741 silly vacuum-fs purging /Users/PavanVittala/.npm/minimist
+742 silly vacuum-fs purging /Users/PavanVittala/.npm/mkdirp
+743 silly vacuum-fs purging /Users/PavanVittala/.npm/morgan
+744 silly vacuum-fs purging /Users/PavanVittala/.npm/ms
+745 silly vacuum-fs purging /Users/PavanVittala/.npm/mute-stream
+746 silly vacuum-fs purging /Users/PavanVittala/.npm/nash
+747 silly vacuum-fs purging /Users/PavanVittala/.npm/negotiator
+748 silly vacuum-fs purging /Users/PavanVittala/.npm/nested-error-stacks
+749 silly vacuum-fs purging /Users/PavanVittala/.npm/node-forge
+750 silly vacuum-fs purging /Users/PavanVittala/.npm/node-int64
+751 silly vacuum-fs purging /Users/PavanVittala/.npm/node-status-codes
+752 silly vacuum-fs purging /Users/PavanVittala/.npm/node-uuid
+753 silly vacuum-fs purging /Users/PavanVittala/.npm/number-is-nan
+754 silly vacuum-fs purging /Users/PavanVittala/.npm/oauth-sign
+755 silly vacuum-fs purging /Users/PavanVittala/.npm/object-assign
+756 silly vacuum-fs purging /Users/PavanVittala/.npm/on-finished
+757 silly vacuum-fs purging /Users/PavanVittala/.npm/on-headers
+758 silly vacuum-fs purging /Users/PavanVittala/.npm/once
+759 silly vacuum-fs purging /Users/PavanVittala/.npm/onetime
+760 silly vacuum-fs purging /Users/PavanVittala/.npm/open
+761 silly vacuum-fs purging /Users/PavanVittala/.npm/os-homedir
+762 silly vacuum-fs purging /Users/PavanVittala/.npm/os-tmpdir
+763 silly vacuum-fs purging /Users/PavanVittala/.npm/osenv
+764 silly vacuum-fs purging /Users/PavanVittala/.npm/package-json
+765 silly vacuum-fs purging /Users/PavanVittala/.npm/parse-json
+766 silly vacuum-fs purging /Users/PavanVittala/.npm/parseurl
+767 silly vacuum-fs purging /Users/PavanVittala/.npm/path-is-absolute
+768 silly vacuum-fs purging /Users/PavanVittala/.npm/path-to-regexp
+769 silly vacuum-fs purging /Users/PavanVittala/.npm/pinkie
+770 silly vacuum-fs purging /Users/PavanVittala/.npm/pinkie-promise
+771 silly vacuum-fs purging /Users/PavanVittala/.npm/pkginfo
+772 silly vacuum-fs purging /Users/PavanVittala/.npm/portfinder
+773 silly vacuum-fs purging /Users/PavanVittala/.npm/prepend-http
+774 silly vacuum-fs purging /Users/PavanVittala/.npm/process-nextick-args
+775 silly vacuum-fs purging /Users/PavanVittala/.npm/progress
+776 silly vacuum-fs purging /Users/PavanVittala/.npm/punycode
+777 silly vacuum-fs purging /Users/PavanVittala/.npm/qs
+778 silly vacuum-fs purging /Users/PavanVittala/.npm/rc
+779 silly vacuum-fs purging /Users/PavanVittala/.npm/read-all-stream
+780 silly vacuum-fs purging /Users/PavanVittala/.npm/readable-stream
+781 silly vacuum-fs purging /Users/PavanVittala/.npm/readline2
+782 silly vacuum-fs purging /Users/PavanVittala/.npm/registry-auth-token
+783 silly vacuum-fs purging /Users/PavanVittala/.npm/registry-url
+784 silly vacuum-fs purging /Users/PavanVittala/.npm/registry.npmjs.org
+785 silly vacuum-fs purging /Users/PavanVittala/.npm/repeating
+786 silly vacuum-fs purging /Users/PavanVittala/.npm/request
+787 silly vacuum-fs purging /Users/PavanVittala/.npm/restore-cursor
+788 silly vacuum-fs purging /Users/PavanVittala/.npm/rimraf
+789 silly vacuum-fs purging /Users/PavanVittala/.npm/router
+790 silly vacuum-fs purging /Users/PavanVittala/.npm/rsvp
+791 silly vacuum-fs purging /Users/PavanVittala/.npm/run-async
+792 silly vacuum-fs purging /Users/PavanVittala/.npm/rx-lite
+793 silly vacuum-fs purging /Users/PavanVittala/.npm/semver
+794 silly vacuum-fs purging /Users/PavanVittala/.npm/semver-diff
+795 silly vacuum-fs purging /Users/PavanVittala/.npm/setprototypeof
+796 silly vacuum-fs purging /Users/PavanVittala/.npm/shelljs
+797 silly vacuum-fs purging /Users/PavanVittala/.npm/slide
+798 silly vacuum-fs purging /Users/PavanVittala/.npm/sntp
+799 silly vacuum-fs purging /Users/PavanVittala/.npm/sshpk
+800 silly vacuum-fs purging /Users/PavanVittala/.npm/stack-trace
+801 silly vacuum-fs purging /Users/PavanVittala/.npm/statuses
+802 silly vacuum-fs purging /Users/PavanVittala/.npm/stream-shift
+803 silly vacuum-fs purging /Users/PavanVittala/.npm/string-length
+804 silly vacuum-fs purging /Users/PavanVittala/.npm/string-template
+805 silly vacuum-fs purging /Users/PavanVittala/.npm/string-width
+806 silly vacuum-fs purging /Users/PavanVittala/.npm/string_decoder
+807 silly vacuum-fs purging /Users/PavanVittala/.npm/stringstream
+808 silly vacuum-fs purging /Users/PavanVittala/.npm/strip-ansi
+809 silly vacuum-fs purging /Users/PavanVittala/.npm/strip-json-comments
+810 silly vacuum-fs purging /Users/PavanVittala/.npm/superstatic
+811 silly vacuum-fs purging /Users/PavanVittala/.npm/supports-color
+812 silly vacuum-fs purging /Users/PavanVittala/.npm/tar
+813 silly vacuum-fs purging /Users/PavanVittala/.npm/tar-stream
+814 silly vacuum-fs purging /Users/PavanVittala/.npm/through
+815 silly vacuum-fs purging /Users/PavanVittala/.npm/timed-out
+816 silly vacuum-fs purging /Users/PavanVittala/.npm/tmp
+817 silly vacuum-fs purging /Users/PavanVittala/.npm/tough-cookie
+818 silly vacuum-fs purging /Users/PavanVittala/.npm/toxic
+819 silly vacuum-fs purging /Users/PavanVittala/.npm/try-require
+820 silly vacuum-fs purging /Users/PavanVittala/.npm/tunnel-agent
+821 silly vacuum-fs purging /Users/PavanVittala/.npm/tweetnacl
+822 silly vacuum-fs purging /Users/PavanVittala/.npm/typedarray
+823 silly vacuum-fs purging /Users/PavanVittala/.npm/underscore
+824 silly vacuum-fs purging /Users/PavanVittala/.npm/universal-analytics
+825 silly vacuum-fs purging /Users/PavanVittala/.npm/unpipe
+826 silly vacuum-fs purging /Users/PavanVittala/.npm/unzip-response
+827 silly vacuum-fs purging /Users/PavanVittala/.npm/update-notifier
+828 silly vacuum-fs purging /Users/PavanVittala/.npm/url-join
+829 silly vacuum-fs purging /Users/PavanVittala/.npm/url-parse-lax
+830 silly vacuum-fs purging /Users/PavanVittala/.npm/user-home
+831 silly vacuum-fs purging /Users/PavanVittala/.npm/util-deprecate
+832 silly vacuum-fs purging /Users/PavanVittala/.npm/utils-merge
+833 silly vacuum-fs purging /Users/PavanVittala/.npm/uuid
+834 silly vacuum-fs purging /Users/PavanVittala/.npm/vary
+835 silly vacuum-fs purging /Users/PavanVittala/.npm/verror
+836 silly vacuum-fs purging /Users/PavanVittala/.npm/websocket-driver
+837 silly vacuum-fs purging /Users/PavanVittala/.npm/websocket-extensions
+838 silly vacuum-fs purging /Users/PavanVittala/.npm/widest-line
+839 silly vacuum-fs purging /Users/PavanVittala/.npm/winston
+840 silly vacuum-fs purging /Users/PavanVittala/.npm/wrappy
+841 silly vacuum-fs purging /Users/PavanVittala/.npm/write-file-atomic
+842 silly vacuum-fs purging /Users/PavanVittala/.npm/xdg-basedir
+843 silly vacuum-fs purging /Users/PavanVittala/.npm/xtend
+844 silly vacuum-fs purging /Users/PavanVittala/.npm/zip-stream
+845 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+846 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+847 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+848 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+849 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+850 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+851 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+852 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+853 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+854 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+855 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+856 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+857 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+858 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+859 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+860 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+861 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+862 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+863 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+864 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+865 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+866 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+867 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+868 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+869 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+870 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+871 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+872 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+873 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+874 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+875 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+876 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+877 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+878 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+879 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+880 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+881 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+882 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+883 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+884 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+885 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+886 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+887 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+888 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+889 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+890 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+891 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+892 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+893 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+894 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+895 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+896 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+897 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+898 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+899 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+900 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+901 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+902 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+903 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+904 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+905 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+906 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+907 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+908 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+909 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+910 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+911 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+912 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+913 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+914 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+915 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+916 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+917 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+918 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+919 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+920 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+921 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+922 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+923 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+924 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+925 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+926 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+927 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+928 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+929 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+930 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+931 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+932 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+933 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+934 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+935 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+936 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+937 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+938 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+939 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+940 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+941 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+942 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+943 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+944 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+945 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+946 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+947 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+948 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+949 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+950 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+951 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+952 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+953 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+954 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+955 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+956 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+957 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+958 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+959 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+960 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+961 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+962 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+963 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+964 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+965 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+966 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+967 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+968 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+969 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+970 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+971 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+972 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+973 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+974 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+975 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+976 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+977 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+978 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+979 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+980 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+981 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+982 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+983 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+984 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+985 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+986 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+987 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+988 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+989 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+990 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+991 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+992 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+993 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+994 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+995 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+996 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+997 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+998 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+999 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1000 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1001 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1002 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1003 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1004 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1005 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1006 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1007 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1008 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1009 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1010 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1011 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1012 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1013 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1014 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1015 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1016 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1017 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1018 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1019 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1020 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1021 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1022 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1023 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1024 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1025 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1026 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1027 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1028 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1029 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1030 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1031 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1032 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1033 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1034 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1035 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1036 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1037 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1038 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1039 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1040 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1041 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1042 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1043 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1044 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1045 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1046 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1047 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1048 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1049 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1050 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1051 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1052 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1053 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1054 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1055 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1056 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1057 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1058 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1059 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1060 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1061 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1062 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1063 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1064 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1065 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1066 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1067 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1068 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1069 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1070 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1071 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1072 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1073 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1074 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1075 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1076 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1077 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1078 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1079 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1080 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1081 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1082 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1083 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1084 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1085 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1086 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1087 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1088 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1089 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1090 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1091 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1092 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1093 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1094 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1095 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1096 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1097 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1098 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1099 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1100 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1101 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1102 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1103 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1104 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1105 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1106 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1107 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1108 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1109 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1110 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1111 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1112 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1113 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1114 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1115 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1116 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1117 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1118 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1119 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1120 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1121 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1122 silly vacuum-fs quitting because other entries in /Users/PavanVittala/.npm
+1123 verbose stack Error: EACCES: permission denied, rmdir '/Users/PavanVittala/.npm/async/0.2.10'
+1123 verbose stack     at Error (native)
+1124 verbose cwd /Users/PavanVittala/Documents/Github/optional-toll
+1125 error Darwin 15.6.0
+1126 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "cache" "clean"
+1127 error node v4.5.0
+1128 error npm  v2.15.9
+1129 error path /Users/PavanVittala/.npm/async/0.2.10
+1130 error code EACCES
+1131 error errno -13
+1132 error syscall rmdir
+1133 error Error: EACCES: permission denied, rmdir '/Users/PavanVittala/.npm/async/0.2.10'
+1133 error     at Error (native)
+1133 error  { [Error: EACCES: permission denied, rmdir '/Users/PavanVittala/.npm/async/0.2.10']
+1133 error   errno: -13,
+1133 error   code: 'EACCES',
+1133 error   syscall: 'rmdir',
+1133 error   path: '/Users/PavanVittala/.npm/async/0.2.10' }
+1134 error Please try running this command again as root/Administrator.
+1135 verbose exit [ -13, true ]

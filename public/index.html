@@ -35,6 +35,20 @@
 <!-- NAVBAR
 ================================================== -->
   <body>
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+      authDomain: "optio-toll.firebaseapp.com",
+      databaseURL: "https://optio-toll.firebaseio.com",
+      storageBucket: "optio-toll.appspot.com",
+      messagingSenderId: "163118324324"
+    };
+    firebase.initializeApp(config);
+
+    var users = firebase.database().ref("users");
+  </script>
     <div class="navbar-wrapper">
       <div class="container">
 
@@ -144,7 +158,7 @@
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img class="img-circle" src="img/toll.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Reliable</h2>
+          <h2>Reliability</h2>
           <p>Get the most updated rates on tolls no matter where you go.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->

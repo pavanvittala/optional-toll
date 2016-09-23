@@ -6,22 +6,33 @@ $(document).ready(function(){
         var email = document.getElementById("email-address");
         var passwd = document.getElementById("ps");
         var confirmPasswd = document.getElementById("confirm-ps");
-            
-        var reference = ["First Name: ", "Last Name: ", "Email: ", "Password: ", "Confirm Password: "];
+
         var inputData;
         if (firstName.value != "" && lastName.value != "" && email.value != "" && passwd.value != "" && confirmPasswd.value != "") {
-            inputData = [firstName.value, lastName.value, email.value, passwd.value, confirmPasswd.value];
-            inputValidationView(reference, inputData);
+            if (passwd.value != confirmPasswd.value) {
+                window.alert("Passwords don't match");
+            }
+            inputData = [firstName.value, lastName.value, email.value, passwd.value];
+            inputValidationView(inputData);
         } else {
             window.alert("Please fill in all the text boxes");
         }
     });
 });
 
-function inputValidationView(reference, listOfData) {
+function inputValidationView(listOfData) {
     var panel = document.getElementById("inputPanel");
-    history.pushState(panel.innerHTML, "RevertingView");
     var body = document.body;
+    var userObject = {"First Name":listOfData[0], "Last Name":listOfData[1], "Email":listOfData[2], "Password":listOfData[3]};
+    var users = firebase.database().ref("users");
+    //1. Add info to database, if not already in there
+    //users.push(userObject);
+    
+    //2. Redirect to home page
+    //location.href = "index.html";
+
+    //history.pushState(panel.innerHTML, "RevertingView");
+    /*
     var table = document.createElement("table");
     table.style.border = "1px solid black";
     for (var i = 0; i<5; i++) {
@@ -48,8 +59,8 @@ function inputValidationView(reference, listOfData) {
     title.appendChild(document.createTextNode("Your Information: "));
     panel.appendChild(title);
     panel.appendChild(table);
-    
     window.alert("This feature is not yet complete... Check back soon!");
+    */
 }
 
 /*

@@ -12,6 +12,19 @@
         <link href="styles/carousel.css" rel="stylesheet">
     </head>
     <body>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+            authDomain: "optio-toll.firebaseapp.com",
+            databaseURL: "https://optio-toll.firebaseio.com",
+            storageBucket: "optio-toll.appspot.com",
+            messagingSenderId: "163118324324"
+        };
+        firebase.initializeApp(config);
+        var users = firebase.database().ref("users");
+    </script>
     <div class="navbar-wrapper" id="nav">
         <div class="container">
 
@@ -63,10 +76,10 @@
                 Email Address: <input type="text" name="email " placeholder="Email Address" id="email-address">
                 <br>
                 <br>
-                Create Password: <input type="text" name="password " placeholder="Password" id="ps">
+                Create Password: <input type="password" name="password " placeholder="Password" id="ps">
                 <br>
                 <br>
-                Confirm Password: <input type="text" name="confirmPassword " placeholder="Confirm Password" id="confirm-ps">
+                Confirm Password: <input type="password" name="confirmPassword " placeholder="Confirm Password" id="confirm-ps">
                 <br><br>
                 <input type="submit" value="Submit" id="submit-data">
                 <br>

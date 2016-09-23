@@ -27,6 +27,20 @@
     </style>
 </head>
 <body>
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+        authDomain: "optio-toll.firebaseapp.com",
+        databaseURL: "https://optio-toll.firebaseio.com",
+        storageBucket: "optio-toll.appspot.com",
+        messagingSenderId: "163118324324"
+    };
+    firebase.initializeApp(config);
+
+    var users = firebase.database().ref("users");
+</script>
 <div class="navbar-wrapper" id="nav">
     <div class="container">
 
