@@ -1,3 +1,10 @@
+function escapeEmail(email) {
+    return email.replace('.', ',');
+}
+
+function unescapeEmail(email) {
+    return email.replace(',', '.');
+}
 
 $(document).ready(function(){
     $("#submit-data").click(function(){
@@ -13,62 +20,34 @@ $(document).ready(function(){
                 window.alert("Passwords don't match");
             }
             inputData = [firstName.value, lastName.value, email.value, passwd.value];
-            inputValidationView(inputData);
+            addUser(inputData);
         } else {
             window.alert("Please fill in all the text boxes");
         }
     });
 });
 
-function inputValidationView(listOfData) {
-    var panel = document.getElementById("inputPanel");
-    var body = document.body;
-    var userObject = {"First Name":listOfData[0], "Last Name":listOfData[1], "Email":listOfData[2], "Password":listOfData[3]};
-    var users = firebase.database().ref("users");
-    //1. Add info to database, if not already in there
-    users.push(userObject);
-    
-    //2. Redirect to home page
-    location.href = "index.html";
-
-    //history.pushState(panel.innerHTML, "RevertingView");
-    /*
-    var table = document.createElement("table");
-    table.style.border = "1px solid black";
-    for (var i = 0; i<5; i++) {
-        var row = table.insertRow();
-        for (var j = 0; j<2; j++) {
-            var col = row.insertCell();
-            if (j == 0) {
-                col.appendChild(document.createTextNode(reference[i]));   
-            } else {
-                col.appendChild(document.createTextNode(listOfData[i]));   
-            }
-            col.style.border = "1px solid black";
+//Add a user to the database
+function addUser(listOfData) {
+    //Create a userObject
+    var userObject = {
+        "First Name": listOfData[0],
+        "Last Name": listOfData[1],
+        "Email": listOfData[2],
+        "Password": listOfData[3]
+    };
+    var GMU = {place: "GMU",  street: "4400 University Dr", cityState: "Fairfax, VA", country: "United States of America", zipCode:  "22030"};
+    var users = firebase.database().ref("users");   //Reference to users
+    users.once('value', function(dataSnapshot) {
+        if (dataSnapshot.hasChild(escapeEmail(listOfData[2]))) {    //Only add data to the database if the database doesn't contain that email
+            alert("That email is already associated with an account");
+        } else {    //Email is not in database
+            users.child(escapeEmail(listOfData[2])).set({
+                firstname: listOfData[0],
+                lastname: listOfData[1],
+                password: listOfData[3],
+                savedLocations: [GMU]
+            });
         }
-    }
-    var input = document.getElementById("input");
-    panel.removeChild(input);
-    table.marginTop = "25px";
-    table.marginBottom = "100px";
-    table.marginLeft = "100px";
-    table.marginRight = "100px";
-    table.style.padding = "3px";
-    table.style.fontWeight = "none";
-    var title = document.createElement("h2");
-    title.appendChild(document.createTextNode("Your Information: "));
-    panel.appendChild(title);
-    panel.appendChild(table);
-    window.alert("This feature is not yet complete... Check back soon!");
-    */
+    });
 }
-
-/*
-//dataInputValidationPanelView
-window.addEventListener('popstate', function(event) {
-    var state = event.state; 
-    console.log(state);
-    //document.getElementById("inputPanel") = state;
-    
-});
-*/
