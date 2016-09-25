@@ -127,25 +127,55 @@ $(document).ready(function(){
 
 function callback(results, status) {
     var marker;
-    var infoWindow;
     var place;
+    var name;
+    var address;
+    var phone;
+    var rating;
+    var website;
+    var description;
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i<results.length; i++) {
             place = results[i];
-            infowindow = new google.maps.InfoWindow({
-               content:  "<p>Hello!</p>"
-            });
-            marker = new google.maps.Marker({
-               position:  results[i].geometry.location,
-                map: map,
-                title: 'Hello world!'
-            });
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
+            marker = new google.maps.Marker({position: results[i].geometry.location, map: map, title: "Title"});
+            //console.log(address, phone, rating, website);
+            name = "<h4>" + place.name + "</h4><br>";
+            address = place.formatted_address;
+            phone = place.formatted_phone_number;
+            rating = place.rating;
+            website = place.website;
+            if (address != null) {
+                address = "<p><h5>Address:</h5> " + place.formatted_address + "</p><br>";
+                description = name+address;
+            }
+            if (phone != null) {
+                phone = "<p><h5>Phone:</h5> " + place.formatted_phone_number + "</p><br>";
+                description = description+phone;
+            }
+            if (rating != null) {
+                rating = "<p><h5>Rating:</h5> " + place.rating + "</p><br>";
+                description = description+rating;
+            }
+            if (website != null) {
+                website = "<p><h5>Website:</h5> " + place.website + "</p><br>";
+                description = description+website;
+            }
+            insertInfoWindow(marker, description);
         }
     }
 }
+
+function insertInfoWindow(marker, message) {
+    var infoWindow = new google.maps.InfoWindow({
+       content: message
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+       infoWindow.open(map, marker);
+    });
+}
+
+
 
 
 
