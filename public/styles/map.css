@@ -126,3 +126,16 @@ footer:a:hover {
     position: relative;
 	top: 60px;
 }
+
+#search {
+    position: absolute;
+    right: 10px;
+
+}
+
+#searchTitle {
+    position: absolute;
+    right: 0;
+}
+
+
