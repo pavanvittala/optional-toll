@@ -56,7 +56,6 @@ $(document).ready(function(){
     });
 });
 
-//Shows/hides address input tab for directions
 $(document).ready(function(){
     $("#show-hide-button-address").click(function(){
         var button = document.getElementById("hideAddress");
@@ -85,7 +84,6 @@ $(document).ready(function(){
         }
     });
 });
-
 
 $(document).ready(function(){
     $("#submitSearch").click(function() {
@@ -174,25 +172,4 @@ function insertInfoWindow(marker, message) {
        infoWindow.open(map, marker);
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
