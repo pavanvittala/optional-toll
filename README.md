@@ -9,4 +9,6 @@ Scenarios:
 2. Search Google Maps for places or locations and get directions to various places from your current location.
 3. Log into the site. This enables users to store information about frequently visited locations or saved locations such as their workplace or home.
 4. View toll data on a route: how much you'd end up paying if you took that route and whether or not there are cheaper routes around you. We will visualize this toll data using D3.js. The template we've chosen is "Multiple Bar Charts". With this we'll be able to display multiple metrics for each route (price, length of route, time to traverse route, etc.).
- 
+
+
+-Note: Scenarios 1 and 2 are implemented in HW3.
