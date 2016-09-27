@@ -176,15 +176,15 @@ function insertInfoWindow(marker, message) {
     });
 }
 $(document).ready(function() {
-    var directionsDisplay = new google.maps.DirectionsRenderer();
-    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplayoriginal = new google.maps.DirectionsRenderer();
+    var directionsServiceprignal = new google.maps.DirectionsService();
     directionsDisplay.setMap(map);
     $("#submitDirections").click(function () {
-        var directionsDisplay1 = new google.maps.DirectionsRenderer();
-        var directionsService1 = new google.maps.DirectionsService();
-        directionsDisplay1.setMap(map);
-        directionsDisplay1=directionsDisplay;
-        directionsService1=directionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        var directionsService = new google.maps.DirectionsService();
+        directionsDisplay.setMap(map);
+        directionsDisplay=directionsDisplayoriginal;
+        directionsService=directionsServiceoriginal;
         var start = document.getElementById('fromAddress');
         var end = document.getElementById('toAddress');
         if (start.value === "" || end.value === "") {
@@ -196,9 +196,9 @@ $(document).ready(function() {
             destination: end.value,
             travelMode: 'DRIVING'
         };
-        directionsService1.route(request, function(result, status) {
+        directionsService.route(request, function(result, status) {
             if (status == 'OK') {
-                directionsDisplay1.setDirections(result);
+                directionsDisplay.setDirections(result);
                 count++;
             } else if (status == 'NOT_FOUND') {
                 alert("Origin or destination not found");
