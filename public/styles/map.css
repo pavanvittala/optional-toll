@@ -138,4 +138,18 @@ footer:a:hover {
     right: 0;
 }
 
+#searchInput {
+    width: 250px;
+}
+
+#fromAddress {
+    width: 250px;
+}
+
+#toAddress {
+    width: 250px;
+}
+
+
+
 
