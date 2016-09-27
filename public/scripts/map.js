@@ -2,12 +2,13 @@
  * Created by PavanVittala on 9/15/16.
 */
 
-
+var count =0;
 var map;
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 0, lng: 0},
-        zoom: 2
+        center: {lat: 41.850033, lng: -87.6500523},
+        zoom: 4
     });
 }
 
@@ -89,14 +90,14 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $("#submitSearch").click(function() {
-        var searchInput = $("#searchInput").val()
-        var service = new google.maps.places.PlacesService(map);
+        var searchInput = $("#searchInput").val()   //The input typed by the user into the search box
+        var service = new google.maps.places.PlacesService(map);    //Google service that handles Places
         var infoWindow = new google.maps.InfoWindow({map: map});
         var lat;
         var lng;
         var currentLocation;
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
+        if (navigator.geolocation) {    //If the navigator supports geolocation
+            navigator.geolocation.getCurrentPosition(function(position) {   //Retrieve data about the current position
                 var pos = {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
@@ -105,17 +106,17 @@ $(document).ready(function(){
                 lat = position.coords.latitude;
                 lng = position.coords.longitude;
                 currentLocation = new google.maps.LatLng(lat, lng);
-                var request = {
+                var request = { //Create a request for PlacesService
                     location: currentLocation,
                     radius: '100',
                     query: searchInput
                 };
                 service.textSearch(request, callback);
                 infoWindow.setPosition(pos);
-                infoWindow.setContent('Location found.');
-                map.setCenter(pos);
-                map.setZoom(15);
-            }, function() {
+                infoWindow.setContent('You are here');  //Put infopane on current location
+                map.setCenter(pos); //Center on the current position
+                map.setZoom(15);    //Zoom appropriately
+            }, function() { //Handle location error
                 handleLocationError(true, infoWindow, map.getCenter());
             });
         } else {
@@ -134,65 +135,85 @@ function callback(results, status) {
     var rating;
     var website;
     var description;
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i<results.length; i++) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {  //If the PlacesServices request succeeds
+        for (var i = 0; i<results.length; i++) {    //Create results.length number of markers and infopanes
             place = results[i];
-            marker = new google.maps.Marker({position: results[i].geometry.location, map: map, title: "Title"});
-            //console.log(address, phone, rating, website);
+            marker = new google.maps.Marker({position: results[i].geometry.location, map: map, title: "Title"});    //Create marker at location of result
+
+            //The next few lines are for formatting the information on the infopanes
             name = "<h4>" + place.name + "</h4><br>";
             address = place.formatted_address;
             phone = place.formatted_phone_number;
             rating = place.rating;
             website = place.website;
-            if (address != null) {
+            if (address != null) {  //Only put address on the pane if it isn't null
                 address = "<p><h5>Address:</h5> " + place.formatted_address + "</p><br>";
                 description = name+address;
             }
-            if (phone != null) {
+            if (phone != null) {    //Only put phone on the pane if it isn't null
                 phone = "<p><h5>Phone:</h5> " + place.formatted_phone_number + "</p><br>";
                 description = description+phone;
             }
-            if (rating != null) {
+            if (rating != null) {   //Only put rating on the pane if it isn't null
                 rating = "<p><h5>Rating:</h5> " + place.rating + "</p><br>";
                 description = description+rating;
             }
-            if (website != null) {
+            if (website != null) {  //Only put website on the pane if it isn't null
                 website = "<p><h5>Website:</h5> " + place.website + "</p><br>";
                 description = description+website;
             }
+            //Call a function to create infopanes for each marker
             insertInfoWindow(marker, description);
         }
     }
 }
 
 function insertInfoWindow(marker, message) {
+    //Load the message into the infopane
     var infoWindow = new google.maps.InfoWindow({
        content: message
     });
 
+    //Add a listener to each marker with the appropriate pane with the right information
     google.maps.event.addListener(marker, 'click', function() {
        infoWindow.open(map, marker);
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$(document).ready(function() {
+    //Save originals
+    var directionsDisplayOriginal = new google.maps.DirectionsRenderer();
+    var directionsServiceOriginal = new google.maps.DirectionsService();
+    directionsDisplayOriginal.setMap(map);
+    $("#submitDirections").click(function () {
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        var directionsService = new google.maps.DirectionsService();
+        directionsDisplay.setMap(map);
+        directionsDisplay=directionsDisplayOriginal;
+        directionsService=directionsServiceOriginal;
+        var start = document.getElementById('fromAddress'); //Origin address
+        var end = document.getElementById('toAddress'); //Destination address
+        if (start.value === "" || end.value === "") {   //Both start and end needs to have values in them
+            alert("Either From Address or To Address is empty");
+            return;
+        }
+        var request = { //Create a routing request
+            origin: start.value,
+            destination: end.value,
+            travelMode: 'DRIVING'
+        };
+        directionsService.route(request, function(result, status) { //The route function returns a status
+            //Only display if the status is OK
+            if (status == 'OK') {
+                directionsDisplay.setDirections(result);
+                count++;
+            } else if (status == 'NOT_FOUND') {
+                alert("Origin or destination not found");
+                return;
+            } else if (status == 'ZERO_RESULTS') {
+                alert("No results");
+                return;
+            }
+        });
+    });
+});

@@ -1,8 +1,9 @@
-function escapeEmail(email) {
+//Our key is an email address. The path for children in Firebase cannot contain periods. So remove these
+function stripEmail(email) {
     return email.replace('.', ',');
 }
 
-function unescapeEmail(email) {
+function deStripEmail(email) {
     return email.replace(',', '.');
 }
 
@@ -39,10 +40,11 @@ function addUser(listOfData) {
     var GMU = {place: "GMU",  street: "4400 University Dr", cityState: "Fairfax, VA", country: "United States of America", zipCode:  "22030"};
     var users = firebase.database().ref("users");   //Reference to users
     users.once('value', function(dataSnapshot) {
-        if (dataSnapshot.hasChild(escapeEmail(listOfData[2]))) {    //Only add data to the database if the database doesn't contain that email
+        if (dataSnapshot.hasChild(stripEmail(listOfData[2]))) {    //Only add data to the database if the database doesn't contain that email
             alert("That email is already associated with an account");
         } else {    //Email is not in database
-            users.child(escapeEmail(listOfData[2])).set({
+            //Create a child whose key is stripEmail(listOfData[2]) and set its data as follows:
+            users.child(stripEmail(listOfData[2])).set({
                 firstname: listOfData[0],
                 lastname: listOfData[1],
                 password: listOfData[3],
