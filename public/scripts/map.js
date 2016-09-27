@@ -6,8 +6,8 @@
 var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 0, lng: 0},
-        zoom: 2
+        center: {lat: 41.850033, lng: -87.6500523},
+        zoom: 4
     });
 }
 
@@ -112,7 +112,7 @@ $(document).ready(function(){
                 };
                 service.textSearch(request, callback);
                 infoWindow.setPosition(pos);
-                infoWindow.setContent('Location found.');
+                infoWindow.setContent('You are here');
                 map.setCenter(pos);
                 map.setZoom(15);
             }, function() {
@@ -175,24 +175,34 @@ function insertInfoWindow(marker, message) {
     });
 }
 
+$(document).ready(function() {
+    $("#submitDirections").click(function () {
+        var directionsDisplay = new google.maps.DirectionsRenderer();
+        directionsDisplay.setMap(map);
+        var directionsService = new google.maps.DirectionsService();
 
+        var start = document.getElementById('fromAddress');
+        var end = document.getElementById('toAddress');
+        if (start.value === "" || end.value === "") {
+            alert("Either From Address or To Address is empty");
+            return;
+        }
+        var request = {
+            origin: start.value,
+            destination: end.value,
+            travelMode: 'DRIVING'
+        };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        directionsService.route(request, function(result, status) {
+            if (status == 'OK') {
+                directionsDisplay.setDirections(result);
+            } else if (status == 'NOT_FOUND') {
+                alert("Origin or destination not found");
+                return;
+            } else if (status == 'ZERO_RESULTS') {
+                alert("No results");
+                return;
+            }
+        });
+    });
+});
