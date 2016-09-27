@@ -1,0 +1,91 @@
+<!--Pavan Vittala-->
+<!--This webpage acts as a "create account" webpage. It allows the user of the site to create an account.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Entry</title>
+        <link href="styles/dataEntry.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/dataEntry.js"></script>
+        <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles/carousel.css" rel="stylesheet">
+    </head>
+    <body>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+            authDomain: "optio-toll.firebaseapp.com",
+            databaseURL: "https://optio-toll.firebaseio.com",
+            storageBucket: "optio-toll.appspot.com",
+            messagingSenderId: "163118324324"
+        };
+        firebase.initializeApp(config);
+        //var users = firebase.database().ref("users");
+    </script>
+    <div class="navbar-wrapper" id="nav">
+        <div class="container">
+
+            <nav class="navbar navbar-inverse navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Optio-toll</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li ><a href="map.html">Map</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Nav header</li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <div class="backgroundImage"></div>
+        <div class="opaqueBox" id="inputPanel">
+            <div id="input">
+                <br>
+                First Name: <input type="text" name="firstname" placeholder="First Name" id="first-name">
+                <br>
+                <br>
+                Last Name: <input type="text" name="lastname " placeholder="Last Name" id="last-name">
+                <br>
+                <br>
+                Email Address: <input type="text" name="email " placeholder="Email Address" id="email-address">
+                <br>
+                <br>
+                Create Password: <input type="password" name="password " placeholder="Password" id="ps">
+                <br>
+                <br>
+                Confirm Password: <input type="password" name="confirmPassword " placeholder="Confirm Password" id="confirm-ps">
+                <br><br>
+                <input type="submit" value="Submit" id="submit-data">
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </body>
+</html>
