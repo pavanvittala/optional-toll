@@ -2,8 +2,9 @@
  * Created by PavanVittala on 9/15/16.
 */
 
-
+var count =0;
 var map;
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 41.850033, lng: -87.6500523},
@@ -174,13 +175,16 @@ function insertInfoWindow(marker, message) {
        infoWindow.open(map, marker);
     });
 }
-
 $(document).ready(function() {
+    var directionsDisplay = new google.maps.DirectionsRenderer();
+    var directionsService = new google.maps.DirectionsService();
+    directionsDisplay.setMap(map);
     $("#submitDirections").click(function () {
-        var directionsDisplay = new google.maps.DirectionsRenderer();
-        directionsDisplay.setMap(map);
-        var directionsService = new google.maps.DirectionsService();
-
+        var directionsDisplay1 = new google.maps.DirectionsRenderer();
+        var directionsService1 = new google.maps.DirectionsService();
+        directionsDisplay1.setMap(map);
+        directionsDisplay1=directionsDisplay;
+        directionsService1=directionsService;
         var start = document.getElementById('fromAddress');
         var end = document.getElementById('toAddress');
         if (start.value === "" || end.value === "") {
@@ -192,10 +196,10 @@ $(document).ready(function() {
             destination: end.value,
             travelMode: 'DRIVING'
         };
-
-        directionsService.route(request, function(result, status) {
+        directionsService1.route(request, function(result, status) {
             if (status == 'OK') {
-                directionsDisplay.setDirections(result);
+                directionsDisplay1.setDirections(result);
+                count++;
             } else if (status == 'NOT_FOUND') {
                 alert("Origin or destination not found");
                 return;
