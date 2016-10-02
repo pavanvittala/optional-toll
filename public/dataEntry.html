@@ -7,24 +7,13 @@
         <title>Data Entry</title>
         <link href="styles/dataEntry.css" rel="stylesheet" type="text/css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/dataEntry.js"></script>
         <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="styles/carousel.css" rel="stylesheet">
+        <!--<link href="styles/carousel.css" rel="stylesheet">-->
     </head>
     <body>
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
-            authDomain: "optio-toll.firebaseapp.com",
-            databaseURL: "https://optio-toll.firebaseio.com",
-            storageBucket: "optio-toll.appspot.com",
-            messagingSenderId: "163118324324"
-        };
-        firebase.initializeApp(config);
-        //var users = firebase.database().ref("users");
-    </script>
+    <script type="text/javascript" src="scripts/cookieOperations.js"></script>
+    <script type="text/javascript" src="scripts/dataEntry.js"></script>
     <div class="navbar-wrapper" id="nav">
         <div class="container">
 
@@ -37,23 +26,24 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Optio-toll</a>
+                        <a class="navbar-brand">Optio-Toll</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="login.html">Login</a></li>
+                            <li class="active"><a href="#">Create Account</a></li>
                             <li ><a href="map.html">Map</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">Account Information</a></li>
+                                    <li><a href="" id="logout_link">Logout</a></li>
+                                    <!--<li><a href="#">Something else here</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Nav header</li>
                                     <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
+                                    <li><a href="#">One more separated link</a></li>-->
                                 </ul>
                             </li>
                         </ul>
@@ -87,5 +77,8 @@
 
             </div>
         </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     </body>
 </html>
