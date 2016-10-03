@@ -26,7 +26,6 @@ var AccountPanel = React.createClass({
                     </div>
                     <div className="panel-body">
                         <UserDataTable userLoggedIn={this.state.userLoggedIn}/>
-                        <UpdateData userLoggedIn={this.state.userLoggedIn}/>
                     </div>
                 </div>
             </div>
@@ -51,24 +50,51 @@ var UserDataTable = React.createClass({
 
     render: function() {
         return(
-            <ul className="list-group">
-                <li className="list-group-item" id="list_email">{this.props.email}</li>
-                <li className="list-group-item" id="list_firstname">{this.props.firstname}</li>
-                <li className="list-group-item" id="list_lastname">{this.props.lastname}</li>
-                <li className="list-group-item" id="list_savedLoc">{this.props.savedLocations}</li>
-            </ul>
-        );
-    }
-
-});
-
-var UpdateData = React.createClass({
-    render: function() {
-        return (
-            <div id="update_button">
-                <input type="submit" value="Update Information" id="update_button"></input>
+            <div>
+                <ul className="list-group">
+                    <li className="list-group-item" id="list_email">{this.props.email}</li>
+                    <li className="list-group-item" id="list_firstname">{this.props.firstname}</li>
+                    <li className="list-group-item" id="list_lastname">{this.props.lastname}</li>
+                    <li className="list-group-item" id="list_savedLoc">{this.props.savedLocations}</li>
+                </ul>
+                <input onClick = {this.loadData} type="submit" value="Update Information" id="update_button"></input>
             </div>
         );
+    },
+
+    loadData: function() {
+        var exists = readCookie('email');
+        var email = document.getElementById('list_email');
+        var first_name = document.getElementById('list_firstname');
+        var last_name = document.getElementById('list_lastname');
+        var saved_loc = document.getElementById('list_savedLoc');
+        var updateButton = document.getElementById('update_button');
+        if (exists == null) {
+            email.appendChild(document.createTextNode("Email:"));
+            first_name.appendChild(document.createTextNode("First Name:"));
+            last_name.appendChild(document.createTextNode("Last Name:"));
+            saved_loc.appendChild(document.createTextNode("Saved Locations:"));
+            updateButton.disabled = true;
+        } else {
+            const databaseURL = "https://optio-toll.firebaseio.com";
+            var url = databaseURL + "/users/" + stripEmail(exists) + "/user.json";
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", url, false);
+            xhttp.send();
+            var retname = xhttp.responseText;
+            var userObject = JSON.parse(retname);
+            email.appendChild(document.createTextNode("Email: "+exists));
+            first_name.appendChild(document.createTextNode("First Name: " + userObject.firstname));
+            last_name.appendChild(document.createTextNode("Last Name: " + userObject.lastname));
+            for (var i = 0; i<userObject.savedLocations.length; i++) {
+                for (var key in userObject.savedLocations[i]) {
+                    var dataPiece = userObject.savedLocations[i][key];
+                    console.log(dataPiece);
+                }
+            }
+            saved_loc.appendChild(document.createTextNode("Saved Locations: " + userObject.savedLocations));
+            updateButton.disabled = true;
+        }
     }
 });
 
@@ -76,4 +102,3 @@ ReactDOM.render(
     <AccountPanel />,
     document.getElementById('account_panel')
 );
-console.log("Finished with react.js");
