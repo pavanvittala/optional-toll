@@ -49,49 +49,12 @@ function loginUser(email, pwd, checkbox) {
 function setCookie(email, remember) {
     if (readCookie("email") == null) {
         if (remember == true) {
-            var days = 1;
+            var days = 7;
             createCookie("email", email, days);
         } else {
-            var days = (1/24)/2;    //30 min
-            createCookie("email", email, days);
+            createCookie("email", email, 0);    //Remember user until browser is closed
         }
     } else {
         alert(email + " is already logged in");
     }
-}
-
-function checkUser(email, passwd) {
-
-
-    /*
-    firebase.database().ref('users/').once('value').then(function(snapShot) {
-        var username = snapShot.val();
-        console.log("firstname: "+username.firstname, "lastname: "+username.lastname, "password: "+ username.password);
-    });
-    */
-    /*
-    users.once('value', function(dataSnapshot) {
-        console.log(dataSnapshot);
-        if (dataSnapshot.hasChild(stripEmail(email))) {
-            userExists = true;
-            if (dataSnapshot.child(stripEmail(email)+"/password").val() == passwd) {
-                passwordsMatch = true;
-            }
-        }
-    });
-    */
-    /*
-    if (userExists && passwordsMatch) {
-        if (rememberCheckBox.checked == true) {
-            setCookie(email, true);
-        } else {
-            setCookie(email, false);
-        }
-    } else if (!passwordsMatch) {
-        alert("Passwords don't match");
-    } else {
-        alert("You need to create an account");
-        //window.location.href = "dataEntry.html";
-    }
-    */
 }
