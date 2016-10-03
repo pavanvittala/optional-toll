@@ -8,14 +8,6 @@ var config = {
     messagingSenderId: "163118324324"
 };
 firebase.initializeApp(config);
-//Our key is an email address. The path for children in Firebase cannot contain periods. So remove these
-function stripEmail(email) {
-    return email.replace('.', ',');
-}
-
-function deStripEmail(email) {
-    return email.replace(',', '.');
-}
 
 $(document).ready(function(){
     $("#submit-data").click(function(){

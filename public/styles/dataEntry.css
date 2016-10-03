@@ -47,7 +47,7 @@ body {
     margin: 0;
 }
 
-
+/*
 .backgroundImage {
     position: fixed;
     top: -20px;
@@ -59,11 +59,14 @@ body {
     height: 2160px;
     filter: blur(0px);
 }
-
+*/
 
 .opaqueBox {
     position: relative;
-    margin: 100px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 150px;
+    margin-top: 25px;
     top: 60px;
     background-color: #ffffff;
     border: 1px solid black;
@@ -71,8 +74,24 @@ body {
     font-weight: bold;
     color: #000000;
     opacity: 0.8;
-    padding-left: 20px;
+
     font-size: 16px;
+    text-align: center;
+}
+
+#welcome {
+    z-index: 10;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    top: 60px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
 }
 
 input {
@@ -83,6 +102,7 @@ input {
     font-weight: bold;
     color: #000000;
 }
+
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */

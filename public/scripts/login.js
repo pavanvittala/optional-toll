@@ -10,14 +10,6 @@ var config = {
 firebase.initializeApp(config);
 var users = firebase.database().ref('users');
 
-function stripEmail(email) {
-    return email.replace('.', ',');
-}
-
-function deStripEmail(email) {
-    return email.replace(',', '.');
-}
-
 $(document).ready(function() {
     $("#submit").click(function() {
         var submitButton = document.getElementById("submit");
