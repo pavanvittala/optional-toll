@@ -1,11 +1,13 @@
-//Our key is an email address. The path for children in Firebase cannot contain periods. So remove these
-function stripEmail(email) {
-    return email.replace('.', ',');
-}
-
-function deStripEmail(email) {
-    return email.replace(',', '.');
-}
+// Initialize Firebase
+"use strict";
+var config = {
+    apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+    authDomain: "optio-toll.firebaseapp.com",
+    databaseURL: "https://optio-toll.firebaseio.com",
+    storageBucket: "optio-toll.appspot.com",
+    messagingSenderId: "163118324324"
+};
+firebase.initializeApp(config);
 
 $(document).ready(function(){
     $("#submit-data").click(function(){
@@ -44,12 +46,32 @@ function addUser(listOfData) {
             alert("That email is already associated with an account");
         } else {    //Email is not in database
             //Create a child whose key is stripEmail(listOfData[2]) and set its data as follows:
-            users.child(stripEmail(listOfData[2])).set({
+            firebase.database().ref('users/'+stripEmail(listOfData[2])).set({user:{
+                firstname: listOfData[0],
+                lastname: listOfData[1],
+                password: listOfData[3],
+                savedLocations: [GMU]
+            }});
+            /*
+            firebase.database().ref('users/'+stripEmail(listOfData[2])).set({
                 firstname: listOfData[0],
                 lastname: listOfData[1],
                 password: listOfData[3],
                 savedLocations: [GMU]
             });
+            users.child(stripEmail(listOfData[2])).set({
+                email: listOfData[2],
+                firstname: listOfData[0],
+                lastname: listOfData[1],
+                password: listOfData[3],
+                savedLocations: [GMU]
+            });
+            */
         }
+    });
+
+    firebase.database().ref('users/'+stripEmail(listOfData[2])).once('value').then(function(snapShot) {
+        var username = snapShot.val();
+        console.log("firstname: "+username.firstname, "lastname: "+username.lastname, "password: "+ username.password);
     });
 }
