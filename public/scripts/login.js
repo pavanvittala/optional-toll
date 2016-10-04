@@ -12,12 +12,11 @@ var users = firebase.database().ref('users');
 
 $(document).ready(function() {
     $("#submit").click(function() {
-        var submitButton = document.getElementById("submit");
         var rememberCheckBox = document.getElementById("remember");
         var email = document.getElementById("inputEmail").value;
         var passwd = document.getElementById("inputPassword").value;
         loginUser(email, passwd, rememberCheckBox);
-    });
+});
 });
 
 function loginUser(email, pwd, checkbox) {
