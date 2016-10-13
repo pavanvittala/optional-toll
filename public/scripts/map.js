@@ -162,8 +162,6 @@ function callback(results, status) {
                 website = "<p><h5>Website:</h5> " + place.website + "</p><br>";
                 description = description+website;
             }
-            savebutton = "<p><h5><button type='button' class='savebutton'> Save Location </button></h5></p>";
-            description = description + savebutton;
             //Call a function to create infopanes for each marker
             insertInfoWindow(marker, description);
         }
@@ -172,7 +170,6 @@ function callback(results, status) {
 
 function insertInfoWindow(marker, message) {
     //Load the message into the infopane
-    var Savebutton = new
     var infoWindow = new google.maps.InfoWindow({
        content: message
     });
@@ -220,11 +217,3 @@ $(document).ready(function() {
         });
     });
 });
-$(document).ready(function()){
-    $('.savebutton').click(function () {
-        var savebutton = document.getElementsByClassName("savebutton");
-
-    })
-
-
-}
