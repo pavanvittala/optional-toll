@@ -10,6 +10,7 @@ var config = {
 firebase.initializeApp(config);
 var users = firebase.database().ref('users');
 
+/*
 $(document).ready(function() {
     $("#submit").click(function() {
         var submitButton = document.getElementById("submit");
@@ -19,6 +20,7 @@ $(document).ready(function() {
         loginUser(email, passwd, rememberCheckBox);
     });
 });
+*/
 
 function loginUser(email, pwd, checkbox) {
     var strip = stripEmail(email);
@@ -29,8 +31,6 @@ function loginUser(email, pwd, checkbox) {
     var retname = xhttp.responseText;
     var userObject = JSON.parse(retname);
     if (retname != null) {  //That account exists in the database, verify credentials
-        //console.log("Input: "+pwd);
-        //console.log("JSON_PWD: "+ userObject.password);
         if (userObject.password === pwd) {  //Check if the password they entered is correct
             if (checkbox.checked == true) {
                 setCookie(email, true);
