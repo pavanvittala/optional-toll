@@ -9,27 +9,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-$(document).ready(function(){
-    $("#submit-data").click(function(){
-        var firstName = document.getElementById("first-name");
-        var lastName = document.getElementById("last-name");
-        var email = document.getElementById("email-address");
-        var passwd = document.getElementById("ps");
-        var confirmPasswd = document.getElementById("confirm-ps");
-
-        var inputData;
-        if (firstName.value != "" && lastName.value != "" && email.value != "" && passwd.value != "" && confirmPasswd.value != "") {
-            if (passwd.value != confirmPasswd.value) {
-                window.alert("Passwords don't match");
-            }
-            inputData = [firstName.value, lastName.value, email.value, passwd.value];
-            addUser(inputData);
-        } else {
-            window.alert("Please fill in all the text boxes");
-        }
-    });
-});
-
 //Add a user to the database
 function addUser(listOfData) {
     //Create a userObject
@@ -52,26 +31,6 @@ function addUser(listOfData) {
                 password: listOfData[3],
                 savedLocations: [GMU]
             }});
-            /*
-            firebase.database().ref('users/'+stripEmail(listOfData[2])).set({
-                firstname: listOfData[0],
-                lastname: listOfData[1],
-                password: listOfData[3],
-                savedLocations: [GMU]
-            });
-            users.child(stripEmail(listOfData[2])).set({
-                email: listOfData[2],
-                firstname: listOfData[0],
-                lastname: listOfData[1],
-                password: listOfData[3],
-                savedLocations: [GMU]
-            });
-            */
         }
-    });
-
-    firebase.database().ref('users/'+stripEmail(listOfData[2])).once('value').then(function(snapShot) {
-        var username = snapShot.val();
-        console.log("firstname: "+username.firstname, "lastname: "+username.lastname, "password: "+ username.password);
     });
 }
