@@ -1,244 +1,373 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<html lang="en">
-<head>
-    <script src="http://colorbrewer2.org/export/colorbrewer.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://d3js.org/topojson.v1.min.js"></script>
-    <title>Visual Information Map</title>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-</head>
+<style>
+    .state{
+        fill: none;
+        stroke: #a9a9a9;
+        stroke-width: 1;
+    }
+    .state:hover{
+        fill-opacity:0.5;
+    }
+    #tooltip {
+        position: absolute;
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 1px;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+    #tooltip h4{
+        margin:0;
+        font-size:14px;
+    }
+    #tooltip{
+        background:rgba(0,0,0,0.9);
+        border:1px solid grey;
+        border-radius:5px;
+        font-size:12px;
+        width:auto;
+        padding:4px;
+        color:white;
+        opacity:0;
+    }
+    #tooltip table{
+        table-layout:fixed;
+    }
+    #tooltip tr td{
+        padding:0;
+        margin:0;
+    }
+    #tooltip tr td:nth-child(1){
+        width:50px;
+    }
+    #tooltip tr td:nth-child(2){
+        text-align:center;
+    }
+</style>
 <body>
-
-
-
-<div id = "map" style = "float : left; min-width:320px;width :50%;height : 600px">
-    <div id="subtitle">Visual Map of saved location</div>
-</div>
-
-
-
-
+<div id="tooltip"></div><!-- div to hold tooltip. -->
+<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+<script src="uStates.js"></script> <!-- creates uStates. -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/cookieOperations.js"></script>
+<script type="text/javascript" src="scripts/lib.js"></script>
 <script>
-    var places = [
-        {
-            name: "1 Gorkha Rifles",
-            nam: "https://en.wikipedia.org/wiki/1_Gorkha_Rifles",
-            location: {
-                latitude: 30.975441,
-                longitude: 76.990228
+
+    function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
+        return "<h4>"+n+"</h4><table>"+
+                "<tr><td>Val</td><td>"+(d.val)+"</td></tr>"+
+                "</table>";
+    }
+
+    var sampleData ={};	/* Sample random data. */
+    /*
+     ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+     "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
+     "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
+     "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
+     "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
+     .forEach(function(d){
+     var low=Math.round(100*Math.random());
+     var mid=Math.round(100*Math.random());
+     var high=Math.round(100*Math.random());
+     sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]),
+     avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#800026")(low/100)};
+     });
+     */
+    var email = readCookie("email");
+    if (readCookie("email") != null) {
+        const databaseURL = "https://optio-toll.firebaseio.com";
+        var url = databaseURL + "/users/" + stripEmail(email) + "/user.json";
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", url, false);
+        xhttp.send();
+        var retname = xhttp.responseText;
+        var userObject = JSON.parse(retname);
+        var locationsArray = userObject.savedLocations;
+
+        var AL = 0;
+        var AK = 0;
+        var AZ = 0;
+        var AR = 0;
+        var CA = 0;
+        var CO = 0;
+        var CT = 0;
+        var DE = 0;
+        var FL = 0;
+        var GA = 0;
+        var HI = 0;
+        var ID = 0;
+        var IL = 0;
+        var IN = 0;
+        var IA = 0;
+        var KS = 0;
+        var KY = 0;
+        var LA = 0;
+        var ME = 0;
+        var MD = 0;
+        var MA = 0;
+        var MI = 0;
+        var MN = 0;
+        var MS = 0;
+        var MO = 0;
+        var MT = 0;
+        var NE = 0;
+        var NV = 0;
+        var NH = 0;
+        var NJ = 0;
+        var NM = 0;
+        var NY = 0;
+        var NC = 0;
+        var ND = 0;
+        var OH = 0;
+        var OK = 0;
+        var OR = 0;
+        var PA = 0;
+        var RI = 0;
+        var SC = 0;
+        var SD = 0;
+        var TN = 0;
+        var TX = 0;
+        var UT = 0;
+        var VT = 0;
+        var VA = 0;
+        var WA = 0;
+        var WV = 0;
+        var WI = 0;
+        var WY = 0;
+        for (var i = 0; i<locationsArray.length; i++) {
+            var cityState = locationsArray[i].cityState;
+            var state = cityState.substring(cityState.length-2, cityState.length);
+            if (state === "AL") {
+                AL++;
+            } else if (state === "AK") {
+                AK++;
+            } else if (state === "AZ") {
+                AZ++;
+            } else if (state === "AR") {
+                AR++;
+            } else if (state === "CA") {
+                CA++;
+            } else if (state === "CO") {
+                CO++;
+            } else if (state === "CT") {
+                CT++;
+            } else if (state === "DE") {
+                DE++;
+            } else if (state === "FL") {
+                FL++;
+            } else if (state === "GA") {
+                GA++;
+            } else if (state === "HI") {
+                HI++;
+            } else if (state === "ID") {
+                ID++;
+            } else if (state === "IL") {
+                IL++;
+            } else if (state === "IN") {
+                IN++;
+            } else if (state === "IA") {
+                IA++;
+            } else if (state === "KS") {
+                KS++;
+            } else if (state === "KY") {
+                KY++;
+            } else if (state === "LA") {
+                LA++;
+            } else if (state === "ME") {
+                ME++;
+            } else if (state === "MD") {
+                MD++;
+            } else if (state === "MA") {
+                MA++;
+            } else if (state === "MI") {
+                MI++;
+            } else if (state === "MN") {
+                MN++;
+            } else if (state === "MS") {
+                MS++;
+            } else if (state === "MO") {
+                MO++;
+            } else if (state === "MT") {
+                MT++;
+            } else if (state === "NE") {
+                NE++;
+            } else if (state === "NV") {
+                NV++;
+            } else if (state === "NH") {
+                NH++;
+            } else if (state === "NJ") {
+                NJ++;
+            } else if (state === "NM") {
+                NM++;
+            } else if (state === "NY") {
+                NY++;
+            } else if (state === "NC") {
+                NC++;
+            } else if (state === "ND") {
+                ND++;
+            } else if (state === "OH") {
+                OH++;
+            } else if (state === "OK") {
+                OK++;
+            } else if (state === "OR") {
+                OR++;
+            } else if (state === "PA") {
+                PA++;
+            } else if (state === "RI") {
+                RI++;
+            } else if (state === "SC") {
+                SC++;
+            } else if (state === "SD") {
+                SD++;
+            } else if (state === "TN") {
+                TN++;
+            } else if (state === "TX") {
+                TX++;
+            } else if (state === "UT") {
+                UT++;
+            } else if (state === "VT") {
+                VT++;
+            } else if (state === "VA") {
+                VA++;
+            } else if (state === "WA") {
+                WA++;
+            } else if (state === "WV") {
+                WV++;
+            } else if (state === "WI") {
+                WI++;
+            } else if (state === "WY") {
+                WY++;
             }
-        },
-        {
-            name: "3 Gorkha Rifles",
-            nam: "https://en.wikipedia.org/wiki/3_Gorkha_Rifles",
-            location: {
-                latitude: 25.317645,
-                longitude:82.973914
-            }
+
+            console.log(state);
         }
-        ,
-        {
-            name: "5 Gorkha Rifles",
-            nam: "https://en.wikipedia.org/wiki/5_Gorkha_Rifles",
-            location: {
-                latitude: 25.578773,
-                longitude:91.893254
-            }
-        }
-        ,
-        {
-            name: "11 Gorkha Rifles",
-            nam: "https://en.wikipedia.org/wiki/11_Gorkha_Rifles",
-            location: {
-                latitude: 26.846694,
-                longitude: 80.946166
-            }
-        }
-        ,
-        {
-            name: "Gharwal Rifles",
-            nam: "https://en.wikipedia.org/wiki/Gharwal_Rifles",
-            location: {
-                latitude: 29.837746,
-                longitude: 78.687107
-            }
-        }
-        ,
-        {
-            name: "Brigade of the Guards",
-            nam: "https://en.wikipedia.org/wiki/Brigade_of_the_Guards",
-            location: {
-                latitude: 21.227531,
-                longitude: 79.190083
-            }
-        }
-        ,
-        {
-            name: "Bihar Regiment",
-            nam: "https://en.wikipedia.org/wiki/Bihar_Regiment",
-            location: {
-                latitude: 25.620667,
-                longitude: 85.049325
-            }
-        }
-        ,
-        {
-            name: "Parachute Regiment",
-            nam: "https://en.wikipedia.org/wiki/Parachute_Regiment",
-            location: {
-                latitude: 12.971599,
-                longitude: 77.594563
-            }
-        }
-        ,
-        {
-            name: "Ramgarh Cantonment",
-            nam: "https://en.wikipedia.org/wiki/Ramgarh_Cantonment",
-            location: {
-                latitude:23.633224,
-                longitude: 85.514874
-            }
-        }
-        ,
-        {
-            name: "Madras Regiment",
-            nam: "https://en.wikipedia.org/wiki/Madras_Regiment",
-            location: {
-                latitude: 11.363560,
-                longitude: 76.788471
-            }
-        }
-        ,
-        {
-            name: "Grenadiers Regiment",
-            nam: "https://en.wikipedia.org/wiki/Grenadiers_Regiment",
-            location: {
-                latitude: 23.181467,
-                longitude: 79.986407
-            }
-        }
-        ,
-        {
-            name: "Maratha Light Infantry",
-            nam: "https://en.wikipedia.org/wiki/Maratha_Light_Infantry",
-            location: {
-                latitude: 15.849695,
-                longitude: 74.497674
-            }
-        },
-        {
-            name: "Rajputana Rifles",
-            nam: "https://en.wikipedia.org/wiki/Rajputana_Rifles",
-            location: {
-                latitude: 28.596128,
-                longitude: 77.158738
-            }
-        },
-        {
-            name: "Kumaon Regiment",
-            nam: "https://en.wikipedia.org/wiki/Kumaon_Regiment",
-            location: {
-                latitude: 29.643362,
-                longitude: 79.432182
-            }
-        }
-        ,
-        {
-            name: "Sikh Light Infantry",
-            nam: "https://en.wikipedia.org/wiki/Sikh_Light_Infantry",
-            location: {
-                latitude: 27.367290,
-                longitude: 79.622137
-            }
-        }
-    ]
-    var width = 960,
-            height = 600;
-    var color= d3.scale.ordinal()
-            .domain([1,2,3,4,5,6,7,8,9])
-            .range(colorbrewer.Oranges[9]);
 
-    /*var projection = d3.geo.mercator()
-     .scale(800)
-     .translate([-500,600]);*/
+        ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+            "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
+            "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
+            "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
+            "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
+                .forEach(function(d){
+                    var val;
+                    if (d === "AL") {
+                        val = AL;
+                    } else if (d === "AK") {
+                        val = AK;
+                    } else if (d === "AZ") {
+                        val = AZ;
+                    } else if (d === "AR") {
+                        val = AR;
+                    } else if (d === "CA") {
+                       val = CA;
+                    } else if (d === "CO") {
+                       val = CO;
+                    } else if (d === "CT") {
+                        val = CT;
+                    } else if (d === "DE") {
+                        val = DE;
+                    } else if (d === "FL") {
+                        val = FL;
+                    } else if (d === "GA") {
+                        val = GA;
+                    } else if (d === "HI") {
+                        val = HI;
+                    } else if (d === "ID") {
+                        val = ID;
+                    } else if (d === "IL") {
+                        val = IL;
+                    } else if (d === "IN") {
+                        val = IN;
+                    } else if (d === "IA") {
+                        val = IA;
+                    } else if (d === "KS") {
+                        val = KS;
+                    } else if (d === "KY") {
+                        val = KY;
+                    } else if (d === "LA") {
+                        val = LA;
+                    } else if (d === "ME") {
+                        val = ME;
+                    } else if (d === "MD") {
+                        val = MD;
+                    } else if (d === "MA") {
+                        val = MA;
+                    } else if (d === "MI") {
+                        val = MI;
+                    } else if (d === "MN") {
+                        val = MN;
+                    } else if (d === "MS") {
+                        val = MS;
+                    } else if (d === "MO") {
+                        val = MO;
+                    } else if (d === "MT") {
+                        val = MT;
+                    } else if (d === "NE") {
+                        val = NE;
+                    } else if (d === "NV") {
+                        val = NV;
+                    } else if (d === "NH") {
+                        val = NH;
+                    } else if (d === "NJ") {
+                        val = NJ;
+                    } else if (d === "NM") {
+                        val = NM;
+                    } else if (d === "NY") {
+                        val = NY;
+                    } else if (d === "NC") {
+                        val = NC;
+                    } else if (d === "ND") {
+                        val = ND;
+                    } else if (d === "OH") {
+                        val = OH;
+                    } else if (d === "OK") {
+                        val = OK;
+                    } else if (d === "OR") {
+                        val = OR;
+                    } else if (d === "PA") {
+                        val = PA;
+                    } else if (d === "RI") {
+                        val = RI;
+                    } else if (d === "SC") {
+                        val = SC;
+                    } else if (d === "SD") {
+                        val = SD;
+                    } else if (d === "TN") {
+                        val = TN;
+                    } else if (d === "TX") {
+                        val = TX;
+                    } else if (d === "UT") {
+                        val = UT;
+                    } else if (d === "VT") {
+                        val = VT;
+                    } else if (d === "VA") {
+                        val = VA;
+                    } else if (d === "WA") {
+                        val = WA;
+                    } else if (d === "WV") {
+                        val = WV;
+                    } else if (d === "WI") {
+                        val = WI;
+                    } else if (d === "WY") {
+                        val = WY;
+                    }
+                    sampleData[d]={val:d3.min([val]), color:d3.interpolate("#ffffcc", "#800026")(val)};
+                });
 
-    <!--  -->
+    } else {
+        alert("Can't");
+    }
+    /* draw states on id #statesvg */
+    uStates.draw("#statesvg", sampleData, tooltipHtml);
 
-    var projection = d3.geo.mercator().scale(1100).translate([-1000,800]);
-    var path = d3.geo.path()
-            .projection(projection);
-
-    var svg = d3.select("#map").append("svg")
-            .attr("viewBox", "0 0 900 800")
-            .attr("preserveAspectRatio", "xMidYMid meet");
-    var data;
-    d3.json("test.json", function(error, swiss) {
-        if (error) throw error;
-
-        var cantons = topojson.feature(swiss, swiss.objects.india);
-
-        //svg.call(tip);
-        var group=svg.selectAll("g")
-                .data(cantons.features)
-                .enter()
-                .append("g");
-        //.on('mouseover', tip.show)
-        //.on('mouseout', tip.hide)
-
-
-        var tip = d3.tip()
-                .attr('class', 'd3-tip')
-                .offset([-5, 0])
-                .style("left", "300px")
-                .style("top", "400px")
-                .html(function(d) {
-                    return ("<a href="+d.nam+" target='_blank'>"+d.name +"</a>");
-                })
-
-        svg.call(tip);
-
-
-        svg.selectAll(".pin")
-                .data(places)
-                .enter().append("circle", ".pin")
-                .attr("r", 5)
-                .attr("transform", function(d) {
-                    return "translate(" + projection([
-                                d.location.longitude,
-                                d.location.latitude
-                            ]) + ")";
-                })
-                .on('mouseover', tip.show)
-                .on('click', tip.hide);
-
-        //var projection = d3.geo.mercator().scale(900).translate([-600,700]);
-        var path= d3.geo.path().projection(projection);
-
-        var areas= group.append("path")
-                .attr("d", path)
-                .attr("class", "area")
-                .attr("fill","steelblue");
-
-    });
+    d3.select(self.frameElement).style("height", "600px");
 </script>
 
-
-
-
-
-
-
-<!--Style-->
-<link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="styles/informationvisual.css" rel="stylesheet" type="text/css"/>
-<!--Scripts-->
-<script type="text/javascript" src="scripts/lib.js"></script>
-<script type="text/javascript" src="scripts/cookieOperations.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script type="text/babel" src="scripts/react.js"></script>
-<script type="text/javascript" src="scripts/account.js"></script>
 </body>
-</html>
