@@ -52,21 +52,6 @@ function addUser(listOfData) {
                 password: listOfData[3],
                 savedLocations: [GMU]
             }});
-            /*
-            firebase.database().ref('users/'+stripEmail(listOfData[2])).set({
-                firstname: listOfData[0],
-                lastname: listOfData[1],
-                password: listOfData[3],
-                savedLocations: [GMU]
-            });
-            users.child(stripEmail(listOfData[2])).set({
-                email: listOfData[2],
-                firstname: listOfData[0],
-                lastname: listOfData[1],
-                password: listOfData[3],
-                savedLocations: [GMU]
-            });
-            */
         }
     });
 
