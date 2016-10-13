@@ -1,7 +1,7 @@
 # optio-toll
 SWE 432 Web Development Project
 
-Optio-Toll enables users to get a better picture of how much they are spending when they use tolls. Services like Google Maps enable users to travel to destinations using tolls, but they dont let the user know  how much a certain toll costs or how much they are spending in total on tolls on a given route. Optio-Toll gives users this functionality.
+Implementing pieces of the Google Maps API from scratch.
 
 Scenarios:
 
