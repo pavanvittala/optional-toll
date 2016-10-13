@@ -15,4 +15,4 @@ Scenarios:
 
 -Note: Scenarios 1 and 2 are implemented in HW3.
 -Note2: Scenario 3 is implemented in HW4.
--Note3: Scenario 4 is implemented in HW5. Also includes visualization of data.
+-Note3: Scenario 4 is implemented in HW5. Also includes visualization of data. Create account and login pages were updated to use React.
