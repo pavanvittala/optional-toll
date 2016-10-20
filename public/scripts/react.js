@@ -70,10 +70,10 @@ var UserDataTable = React.createClass({
         var saved_loc = document.getElementById('list_savedLoc');
         var updateButton = document.getElementById('update_button');
         if (exists == null) {
-            email.appendChild(document.createTextNode("Email:"));
-            first_name.appendChild(document.createTextNode("First Name:"));
-            last_name.appendChild(document.createTextNode("Last Name:"));
-            saved_loc.appendChild(document.createTextNode("Saved Locations:"));
+            email.appendChild(document.createTextNode("Email: Not Logged In"));
+            first_name.appendChild(document.createTextNode("First Name: -"));
+            last_name.appendChild(document.createTextNode("Last Name: -"));
+            saved_loc.appendChild(document.createTextNode("Saved Locations: -"));
             updateButton.disabled = true;
         } else {
             const databaseURL = "https://optio-toll.firebaseio.com";
