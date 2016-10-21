@@ -1,4 +1,7 @@
-var InputPanel = React.createClass({
+"use strict";
+var users = firebase.database().ref('users');
+
+var InputPanel = React.createClass( {
     render: function() {
         return (
             <div id="input">
@@ -26,11 +29,11 @@ var InputPanel = React.createClass({
 });
 
 
-var SubmitUser = React.createClass({
+var SubmitUser = React.createClass( {
     render: function() {
         return(
             <div>
-                <input onClick={this.submitUser} type="submit" value="Submit" id="submit-data" />
+                <input onClick={this.submitUser} type="submit" value="Submit" id="submit-data" className="buttonthing" />
             </div>
         );
     },
@@ -60,4 +63,46 @@ ReactDOM.render(
     document.getElementById('inputPanel')
 );
 
+describe('Create Account Panel', function() {
+    var TestUtils = React.addons.TestUtils;
 
+    it('can render correctly', function() {
+        var component, element;
+        element = React.createElement(InputPanel);
+        component = TestUtils.renderIntoDocument(element);
+
+        expect(function() {
+            let button = TestUtils.findRenderedDOMComponentWithClass(component, 'buttonthing');
+            expect(button).not.toBeUndefined();
+            expect(button.value).toBe('Submit');
+        }).not.toThrow();
+    });
+});
+
+
+describe("Firebase Functionality", function(){
+    describe("When the button is clicked", function() {
+        var TestUtils = React.addons.TestUtils;
+        var component, element;
+        beforeEach(function(done){
+            element = React.createElement(InputPanel);
+            component = TestUtils.renderIntoDocument(element);
+            var button = TestUtils.findRenderedDOMComponentWithClass(component, 'buttonthing');
+            var fields = $("input");
+            fields[0].value = "Yick";
+            fields[1].value = "Yack";
+            fields[2].value = "yick@yahoo.com";
+            fields[3].value = "123";
+            fields[4].value = "123";
+            TestUtils.Simulate.click(button);
+            spyOn(users, "once").and.callFake(function() {
+                console.log("spying...");
+                done();
+            });
+        });
+
+        it("set to have been called", function() {
+            expect(users.once).toHaveBeenCalled();
+        });
+    });
+});
