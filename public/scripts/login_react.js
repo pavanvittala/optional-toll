@@ -1,4 +1,6 @@
-var LoginPanel = React.createClass({
+"use strict";
+
+var LoginPanel = React.createClass( {
     render: function() {
         return (
             <div className="container">
@@ -43,5 +45,50 @@ ReactDOM.render(
 <LoginPanel />,
     document.getElementById('containerThing')
 );
+
+describe('Login Account Panel', function() {
+    var TestUtils = React.addons.TestUtils;
+
+    it('can render correctly', function() {
+        var component, element;
+        element = React.createElement(LoginPanel);
+        component = TestUtils.renderIntoDocument(element);
+
+        expect(function() {
+            let button = TestUtils.findRenderedDOMComponentWithTag(component, 'button');
+            expect(button).not.toBeUndefined();
+            expect(button.innerHTML).toBe('Sign in');
+        }).not.toThrow();
+    });
+});
+
+/*
+describe("Login Functionality", function(){
+    describe("When the button is clicked", function() {
+        var TestUtils = React.addons.TestUtils;
+        var component, element;
+        beforeEach(function(done){
+            element = React.createElement(InputPanel);
+            component = TestUtils.renderIntoDocument(element);
+            var button = TestUtils.findRenderedDOMComponentWithTag(component, 'button');
+            var fields = $("input");
+            fields[0].value = "Yick";
+            fields[1].value = "Yack";
+            fields[2].value = "yick@yahoo.com";
+            fields[3].value = "123";
+            fields[4].value = "123";
+            TestUtils.Simulate.click(button);
+            spyOn(users, "once").and.callFake(function() {
+                console.log("spying...");
+                done();
+            });
+        });
+
+        it("set to have been called", function() {
+            expect(users.once).toHaveBeenCalled();
+        });
+    });
+});
+*/
 
 

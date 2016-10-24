@@ -1,5 +1,6 @@
 //Holds view information for account.html
 
+"use strict";
 var AccountPanel = React.createClass({
     getInitialState: function() {
         return {
@@ -98,7 +99,4 @@ var UserDataTable = React.createClass({
     }
 });
 
-ReactDOM.render(
-    <AccountPanel />,
-    document.getElementById('account_panel')
-);
+ReactDOM.render(<AccountPanel />, document.getElementById('account_panel'));
