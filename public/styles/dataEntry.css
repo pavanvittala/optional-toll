@@ -1,0 +1,152 @@
+/*Pavan Vittala*/
+/*Styles for dataEntry.html*/
+
+/*
+nav {
+    position: fixed;
+    top: 0;
+    width: 99%;
+    z-index: 9999;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: dodgerblue;
+}
+*/
+
+body {
+    color: white;
+    margin: 0;
+}
+
+/*
+.backgroundImage {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    right: 0;
+    z-index: -9999;
+    background-image: url("../img/singapore.jpg");
+    width: 3840px;
+    height: 2160px;
+    filter: blur(0px);
+}
+*/
+
+.opaqueBox {
+    position: relative;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 150px;
+    margin-top: 25px;
+    top: 60px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #000000;
+    opacity: 0.8;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+#welcome {
+    z-index: 10;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    top: 60px;
+    background-color: #ffffff;
+    opacity: 0.8;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+input {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
