@@ -63,6 +63,7 @@ ReactDOM.render(
     document.getElementById('inputPanel')
 );
 
+/*
 describe('Create Account Panel', function() {
     var TestUtils = React.addons.TestUtils;
 
@@ -106,3 +107,4 @@ describe("Firebase Functionality", function(){
         });
     });
 });
+*/
