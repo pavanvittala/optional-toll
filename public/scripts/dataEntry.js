@@ -27,7 +27,7 @@ function addUser(listOfData) {
         } else {    //Email is not in database
             //Create a child whose key is stripEmail(listOfData[2]) and set its data as follows:
 
-            $.post("/addUser", {data: listOfData});
+            $.post("/addUser", {data: listOfData, GMU: GMU});
 
             /*
             firebase.database().ref('users/'+stripEmail(listOfData[2])).set({user:{
