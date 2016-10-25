@@ -6,7 +6,7 @@ var config = {
     databaseURL: "https://optio-toll.firebaseio.com",
     storageBucket: "optio-toll.appspot.com",
     messagingSenderId: "163118324324"
-    users.onc};
+};
 firebase.initializeApp(config);
 
 //Add a user to the database
@@ -20,7 +20,7 @@ function addUser(listOfData) {
     };
     var GMU = {place: "GMU",  street: "4400 University Dr", cityState: "Fairfax, VA", country: "United States of America", zipCode:  "22030"};
     var users = firebase.database().ref("users");   //Reference to users
-e('value', function(dataSnapshot) {
+    users.once('value', function(dataSnapshot) {
         if (dataSnapshot.hasChild(stripEmail(listOfData[2]))) {    //Only add data to the database if the database doesn't contain that email
             alert("That email is already associated with an account");
         } else {    //Email is not in database
@@ -36,7 +36,6 @@ e('value', function(dataSnapshot) {
                 savedLocations: [GMU]
             }});
             */
-
         }
     });
 }
