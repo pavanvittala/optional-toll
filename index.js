@@ -17,18 +17,21 @@ var app = express();
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(port, function () {
-    console.log('Example app listening on port ' + port);
-});
-
 app.get('/', function(req, res) {
 	console.log("Looking at the root directory?");
 });
 
+app.post('/addUser', function(req, res) {
+	console.log("Client wants to add a user: " + req.body.data);
+	
+});
+
+app.listen(port, function () {
+    console.log('Example app listening on port ' + port);
+});
 
 /*
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 */
-
