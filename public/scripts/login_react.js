@@ -46,6 +46,7 @@ ReactDOM.render(
     document.getElementById('containerThing')
 );
 
+/*
 describe('Login Account Panel', function() {
     var TestUtils = React.addons.TestUtils;
 
@@ -62,7 +63,6 @@ describe('Login Account Panel', function() {
     });
 });
 
-/*
 describe("Login Functionality", function(){
     describe("When the button is clicked", function() {
         var TestUtils = React.addons.TestUtils;
