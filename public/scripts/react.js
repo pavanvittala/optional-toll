@@ -58,7 +58,7 @@ var UserDataTable = React.createClass({
                     <li className="list-group-item" id="list_lastname">{this.props.lastname}</li>
                     <li className="list-group-item" id="list_savedLoc">{this.props.savedLocations}</li>
                 </ul>
-                <input onClick = {this.loadData} type="submit" value="Update Information" id="update_button"></input>
+                <input onClick = {this.loadData} type="submit" value="Update Information" id="update_button"></input>            
             </div>
         );
     },
