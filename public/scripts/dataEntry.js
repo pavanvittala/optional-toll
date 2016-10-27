@@ -1,4 +1,5 @@
 // Initialize Firebase
+
 "use strict";
 var config = {
     apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
@@ -25,12 +26,17 @@ function addUser(listOfData) {
             alert("That email is already associated with an account");
         } else {    //Email is not in database
             //Create a child whose key is stripEmail(listOfData[2]) and set its data as follows:
+
+            $.post("/addUser", {data: listOfData, GMU: GMU});
+
+            /*
             firebase.database().ref('users/'+stripEmail(listOfData[2])).set({user:{
                 firstname: listOfData[0],
                 lastname: listOfData[1],
                 password: listOfData[3],
                 savedLocations: [GMU]
             }});
+            */
         }
     });
 }

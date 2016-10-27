@@ -49,6 +49,32 @@
 
     <!--Panel containing user information-->
     <div id="account_panel"></div>
+    <form id="newItemForm" action="/uploadFile" method="post" enctype="multipart/form-data">
+            <input type="file" id="newFile" name="img">
+            <input onClick= {this.uploadFile} type="submit" value="New">
+    </form>
+    <style>
+        #newItemForm {
+            position: absolute;
+            top: 400px;
+        }
+    </style>
+    <script>
+        //Gcloud code
+        $('#newItemForm').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData($("#newItemForm")[0]);
+            console.log(formData);
+            //$.post("/uploadFile", {data: formData, processData: false, contentType: false});
+            $.ajax({
+                type: "POST",
+                url: "/uploadFile",
+                data: formData,
+                processData: false,
+                contentType: false
+        });
+    });
+    </script>
 
     <!--Style-->
     <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,13 +86,15 @@
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <!--BEGIN Related to Jasmine-->
+    <!--
     <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.0.0/jasmine_favicon.png">
     <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.5.2/jasmine.css">
     <script type="text/javascript" src="jasmine/lib/jasmine-2.5.2/jasmine.js"></script>
     <script type="text/javascript" src="jasmine/lib/jasmine-2.5.2/jasmine-html.js"></script>
     <script type="text/javascript" src="jasmine/lib/jasmine-2.5.2/boot.js"></script>
+    -->
     <!--END Related to Jasmine-->
     <script type="text/babel" src="scripts/react.js"></script>
-    <script type="text/javascript" src="scripts/account.js"></script>
+    <!--<script type="text/javascript" src="scripts/account.js"></script>-->
 </body>
 </html>
