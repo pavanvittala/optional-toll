@@ -53,6 +53,12 @@
             <input type="file" id="newFile" name="img">
             <input onClick= {this.uploadFile} type="submit" value="New">
     </form>
+    <style>
+        #newItemForm {
+            position: absolute;
+            top: 400px;
+        }
+    </style>
     <script>
         //Gcloud code
         $('#newItemForm').submit(function(e) {

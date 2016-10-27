@@ -7,12 +7,24 @@ var bodyParser = require("body-parser");
 
 var gcloud = require('google-cloud');
 var firebase = require('firebase');
+/*
 var multer = require("multer");
-var uploader = multer({ storage: multer.memoryStorage({}) });
+var uploader = multer({
+	storage: multer.MemoryStorage({}) });
+*/
+var Multer = require('multer');
+var multer = Multer({
+  storage: Multer.MemoryStorage,
+  limits: {
+    fileSize: 10 * 1024 * 1024 // no larger than 10mb
+  }
+});
 var app = express();
 var port = process.env.PORT || 3000;
 
+
 var app = express();
+var router = express.Router();
 
 firebase.initializeApp({
 	serviceAccount: "privkey.json",
@@ -101,14 +113,37 @@ function sendUploadToGCS (req, res, next) {
     stream.end(req.file.buffer);
 }
 
-app.post('/uploadFile', uploader.single("img"), sendUploadToGCS, function(req, res, next) {
+router.post(
+  '/uploadFile',
+  multer.single('img'),
+  sendUploadToGCS,
+  function insert (req, res, next) {
+    var data = req.body;
+
+    // Was an image uploaded? If so, we'll use its public URL
+    // in cloud storage.
+    if (req.file && req.file.cloudStoragePublicUrl) {
+      data.imageUrl = req.file.cloudStoragePublicUrl;
+    }
+
+    // Save the data to the database.
+    getModel().create(data, function (err, savedData) {
+      if (err) {
+        return next(err);
+      }
+      res.redirect(req.baseUrl + '/' + savedData.id);
+    });
+  }
+);
+/*
+app.post('/uploadFile', multer.single("img"), sendUploadToGCS, function(req, res, next) {
 	var data = {"text" : req.body.todoText};
 	console.log("Client wants to upload file to Google Cloud");
     if(req.file)
     	console.log("req.file exists");
         data.img = getPublicUrl(req.file.cloudStorageObject);
 });
-
+*/
 app.listen(port, function () {
     console.log('Example app listening on port ' + port);
 });
