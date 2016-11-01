@@ -49,6 +49,32 @@
 
     <!--Panel containing user information-->
     <div id="account_panel"></div>
+    <form id="newItemForm" action="/uploadFile" method="post" enctype="multipart/form-data">
+            <input type="file" id="newFile" name="img">
+            <input onClick= {this.uploadFile} type="submit" value="New">
+    </form>
+    <style>
+        #newItemForm {
+            position: absolute;
+            top: 400px;
+        }
+    </style>
+    <script>
+        //Gcloud code
+        $('#newItemForm').submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData($("#newItemForm")[0]);
+            console.log(formData);
+            //$.post("/uploadFile", {data: formData, processData: false, contentType: false});
+            $.ajax({
+                type: "POST",
+                url: "/uploadFile",
+                data: formData,
+                processData: false,
+                contentType: false
+        });
+    });
+    </script>
 
     <!--Style-->
     <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
