@@ -16,7 +16,7 @@ Scenarios:
 
 •Note3: Scenario 4 is implemented in HW5. Also includes visualization of data. Create account and login pages were updated to use React
 
-•Note4: Scenarios 1-3 implemented by HW8
+•Note4: Scenarios 1-3 implemented in HW8
 
 Deployed application on Heroku: https://maps-system.herokuapp.com
 
