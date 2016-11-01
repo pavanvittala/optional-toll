@@ -11,8 +11,11 @@ Scenarios:
 4. Store information about frequently visited locations. Can view this information on an alternative map. Implemented using a map from D3.JS.
 
 •Note1: Scenarios 1 and 2 are implemented in HW3
+
 •Note2: Scenario 3 is implemented in HW4
+
 •Note3: Scenario 4 is implemented in HW5. Also includes visualization of data. Create account and login pages were updated to use React
+
 •Note4: Scenarios 1-3 implemented by HW8
 
 Deployed application on Heroku: https://maps-system.herokuapp.com
