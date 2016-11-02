@@ -2,8 +2,17 @@
  * Created by PavanVittala on 9/15/16.
 */
 
-var count =0;
+var count = 0;
 var map;
+var markersArray = [];
+var directionsDisplay;
+
+function clearMarkers() {
+    while (markersArray.length) {
+        markersArray.pop().setMap(null);
+    }
+    markersArray.length = 0;
+}
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
@@ -87,9 +96,13 @@ $(document).ready(function(){
     });
 });
 
-
+//Function for searching Google Maps for places/ locations
 $(document).ready(function(){
     $("#submitSearch").click(function() {
+        clearMarkers();
+        if (directionsDisplay != null) {
+            directionsDisplay.set('directions', null);
+        }
         var searchInput = $("#searchInput").val()   //The input typed by the user into the search box
         var service = new google.maps.places.PlacesService(map);    //Google service that handles Places
         var infoWindow = new google.maps.InfoWindow({map: map});
@@ -126,6 +139,7 @@ $(document).ready(function(){
     });
 });
 
+//Callback for a text search in the Google Maps API
 function callback(results, status) {
     var marker;
     var place;
@@ -175,18 +189,21 @@ function insertInfoWindow(marker, message) {
     });
 
     //Add a listener to each marker with the appropriate pane with the right information
+    markersArray.push(marker);
     google.maps.event.addListener(marker, 'click', function() {
        infoWindow.open(map, marker);
     });
 }
 
+//Code for getting a route between two points
 $(document).ready(function() {
     //Save originals
     var directionsDisplayOriginal = new google.maps.DirectionsRenderer();
     var directionsServiceOriginal = new google.maps.DirectionsService();
     directionsDisplayOriginal.setMap(map);
     $("#submitDirections").click(function () {
-        var directionsDisplay = new google.maps.DirectionsRenderer();
+        clearMarkers();
+        directionsDisplay = new google.maps.DirectionsRenderer();
         var directionsService = new google.maps.DirectionsService();
         directionsDisplay.setMap(map);
         directionsDisplay=directionsDisplayOriginal;
