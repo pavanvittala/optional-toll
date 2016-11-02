@@ -1,4 +1,16 @@
+/*
 "use strict";
+
+var config = {
+    apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+    authDomain: "optio-toll.firebaseapp.com",
+    databaseURL: "https://optio-toll.firebaseio.com",
+    storageBucket: "optio-toll.appspot.com",
+    messagingSenderId: "163118324324"
+};
+//firebase.initializeApp(config);
+var GoogleUsers = firebase.database().ref('GoogleUsers');
+
 
 var LoginPanel = React.createClass( {
     render: function() {
@@ -41,10 +53,13 @@ var LoginUser = React.createClass({
     }
 });
 
+
 ReactDOM.render(
 <LoginPanel />,
     document.getElementById('containerThing')
 );
+*/
+
 
 /*
 describe('Login Account Panel', function() {
