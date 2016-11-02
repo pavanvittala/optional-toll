@@ -4,6 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+    var config = {
+        apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+        authDomain: "optio-toll.firebaseapp.com",
+        databaseURL: "https://optio-toll.firebaseio.com",
+        storageBucket: "optio-toll.appspot.com",
+        messagingSenderId: "163118324324"
+    };
+    firebase.initializeApp(config);
+    </script>
     <title>Better Toll System for Google Maps</title>
     <!--<link href="styles/carousel.css" rel="stylesheet">-->
     <link href="styles/map.css" rel="stylesheet" type="text/css"/>
@@ -27,17 +38,6 @@
     </style>
 </head>
 <body>
-<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-<script>
-    var config = {
-        apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
-        authDomain: "optio-toll.firebaseapp.com",
-        databaseURL: "https://optio-toll.firebaseio.com",
-        storageBucket: "optio-toll.appspot.com",
-        messagingSenderId: "163118324324"
-    };
-    firebase.initializeApp(config);
-</script>
 <div class="navbar-wrapper" id="nav">
     <div class="container">
         <nav class="navbar navbar-inverse navbar-static-top">

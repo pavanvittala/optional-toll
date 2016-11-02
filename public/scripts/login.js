@@ -1,16 +1,6 @@
 // Initialize Firebase
 
 "use strict";
-var config = {
-    apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
-    authDomain: "optio-toll.firebaseapp.com",
-    databaseURL: "https://optio-toll.firebaseio.com",
-    storageBucket: "optio-toll.appspot.com",
-    messagingSenderId: "163118324324"
-};
-firebase.initializeApp(config);
-var users = firebase.database().ref('users');
-var GoogleUsers = firebase.database().ref('GoogleUsers');
 
 var userName;
 firebase.auth().onAuthStateChanged(function(user) {

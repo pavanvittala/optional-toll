@@ -39,15 +39,10 @@ function deleteCookie(name) {
 
 $(document).ready(function() {
     $("#logout_link").click(function () {
-        var check = readCookie("email");
-        if (check == null) {
-            alert("Not logged In Via Website");
-        } else {
-            deleteCookie("email");
-        }
         firebase.auth().signOut().then(function() {
             // Sign-out successful.
             console.log("Signed Out");
+            return;
         }, function(error) {
             // An error happened.
             console.log("An error occurred while trying to sign out");
