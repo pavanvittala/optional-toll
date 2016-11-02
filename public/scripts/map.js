@@ -100,7 +100,9 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#submitSearch").click(function() {
         clearMarkers();
-        directionsDisplay.set('directions', null);
+        if (directionsDisplay != null) {
+            directionsDisplay.set('directions', null);
+        }
         var searchInput = $("#searchInput").val()   //The input typed by the user into the search box
         var service = new google.maps.places.PlacesService(map);    //Google service that handles Places
         var infoWindow = new google.maps.InfoWindow({map: map});
