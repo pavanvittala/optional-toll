@@ -1,12 +1,12 @@
 // Initialize Firebase
 
 "use strict";
+var GoogleUsers = firebase.database().ref('GoogleUsers');
 
 var userName;
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
-        //$('#login-header').hide();
         $('#sign-in-header span').text('Logged In');
         var displayName = user.displayName;
         var email = user.email;

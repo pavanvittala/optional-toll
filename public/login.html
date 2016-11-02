@@ -123,6 +123,18 @@
     </div>
     <div id="firebaseui"></div>
   </div>
+  <script>
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        $('#sign-in-header span').text('Logged In');
+      } else {
+        $('#sign-in-header span').text('Please Log In');
+      }
+    }), function(error) {
+      console.log("Printing an error now");
+      console.log(error);
+    };
+  </script>
 
   </body>
 </html>
