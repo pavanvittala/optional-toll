@@ -64,6 +64,32 @@ var UserDataTable = React.createClass({
     },
 
     loadData: function() {
+        var email = document.getElementById('list_email');
+        var first_name = document.getElementById('list_firstname');
+        var last_name = document.getElementById('list_lastname');
+        var saved_loc = document.getElementById('list_savedLoc');
+        var updateButton = document.getElementById('update_button');
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+                const databaseURL = "https://optio-toll.firebaseio.com";
+                var url = databaseURL + "/users/" + stripEmail(exists) + "/user.json";
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", url, false);
+                xhttp.send();
+                var retname = xhttp.responseText;
+                var userObject = JSON.parse(retname);
+            } else {
+                // No user is signed in.
+                email.appendChild(document.createTextNode("Email: Not Logged In"));
+                first_name.appendChild(document.createTextNode("First Name: -"));
+                last_name.appendChild(document.createTextNode("Last Name: -"));
+                saved_loc.appendChild(document.createTextNode("Saved Locations: -"));
+                updateButton.disabled = true;
+            }
+        });
+
+        /*
         var exists = readCookie('email');
         var email = document.getElementById('list_email');
         var first_name = document.getElementById('list_firstname');
@@ -96,6 +122,7 @@ var UserDataTable = React.createClass({
             saved_loc.appendChild(document.createTextNode("Saved Locations: " + userObject.savedLocations));
             updateButton.disabled = true;
         }
+        */
     }
 });
 

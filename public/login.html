@@ -11,6 +11,13 @@
 
     <title>Signin</title>
 
+    <!-- Firebase Auth -->
+    <script src="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
+
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -75,7 +82,7 @@
             <ul class="nav navbar-nav">
               <li ><a href="index.html">Home</a></li>
               <li class="active"><a href="#">Login</a></li>
-              <li><a href="dataEntry.html">Create Account</a></li>
+              <!--<li><a href="dataEntry.html">Create Account</a></li>-->
               <li><a href="map.html">Map</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
@@ -99,5 +106,13 @@
   </div>
 
   <div id="containerThing"></div>
+
+  <div id = 'login-header'>
+    <div id="sign-in-header">
+        <span>Please Log In:</span>
+    </div>
+    <div id="firebaseui"></div>
+  </div>
+
   </body>
 </html>
