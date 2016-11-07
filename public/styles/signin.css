@@ -40,6 +40,19 @@ body {
   border-top-right-radius: 0;
 }
 
+#login-header {
+  margin: auto;
+  width: 50%;
+  padding-top: 10px;
+  margin-top: 25px;
+}
+
+#sign-in-header {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
