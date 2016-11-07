@@ -106,7 +106,6 @@ $(document).ready(function(){
         var searchInput = $("#searchInput").val()   //The input typed by the user into the search box
         var service = new google.maps.places.PlacesService(map);    //Google service that handles Places
         var infoWindow = new google.maps.InfoWindow({map: map});
-        /*
         var lat;
         var lng;
         var currentLocation;
@@ -137,17 +136,6 @@ $(document).ready(function(){
             // Browser doesn't support Geolocation
             handleLocationError(false, infoWindow, map.getCenter());
         }
-        */
-        var request = { //Create a request for PlacesService
-            //location: currentLocation,
-            radius: '100',
-            query: searchInput
-        };
-        service.textSearch(request, callback);
-        //infoWindow.setPosition(pos);
-        //infoWindow.setContent('You are here');  //Put infopane on current location
-        //map.setCenter(pos); //Center on the current position
-        //map.setZoom(15);    //Zoom appropriately
     });
 });
 
