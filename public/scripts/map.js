@@ -23,16 +23,13 @@ function initMap() {
 
 //Function that changes the number of tolls displayed in the toll table.
 //function refreshTable() {
+/*
 $(document).ready(function(){
     $('#refreshButton').click(function(){
         var defaultTollNumber = $('#tableOfTolls').data('default');
         var numTolls = document.getElementById("numTolls").value;   //New number of rows you want
         var table = document.getElementById("tolltable");   //Save the table object on the page
         var tableNumRows = table.rows.length-1;   //Number of rows actually there, -1 because we have a label row
-        /*  For debugging purposes
-        console.log("Number of rows you want: ");console.log(numTolls);
-        console.log("Number of rows you have: ");console.log(tableNumRows);
-        */
         if (numTolls > defaultTollNumber) {
             alert("A maximum of 4 tolls can be displayed at once");
         } else if (numTolls < tableNumRows) {  //Decrease the number of rows
@@ -44,10 +41,6 @@ $(document).ready(function(){
             }
         } else if (numTolls > tableNumRows) {   //Increase the number of rows
             var tableCreation = numTolls - tableNumRows;
-            /*  For debugging purposes
-            console.log("Number of Rows you want: " + numTolls);
-            console.log("Number of rows currently there: " + tableNumRows);
-            */
             var row;
             for (var i = 0; i<tableCreation; i++) { //Add row
                 row = table.insertRow(-1);
@@ -65,7 +58,9 @@ $(document).ready(function(){
         }
     });
 });
+*/
 
+/*
 //Shows/hides address input tab for directions
 $(document).ready(function(){
     $("#show-hide-button-address").click(function(){
@@ -81,8 +76,10 @@ $(document).ready(function(){
         }
     });
 });
+*/
 
 //Shows/hides toll data tab
+/*
 $(document).ready(function(){
     $("#show-hide-button-tolls").click(function(){
         var button = document.getElementById("hideTolls");
@@ -95,6 +92,7 @@ $(document).ready(function(){
         }
     });
 });
+*/
 
 //Function for searching Google Maps for places/ locations
 $(document).ready(function(){

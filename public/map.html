@@ -81,14 +81,32 @@
 <script type="text/javascript" src="scripts/cookieOperations.js"></script>
 <script type="text/javascript" src="scripts/map.js"></script>
 <div id="addressEncap">
+    <!--
     <div id="show-hide-button-address">
         <input type="button" value="Hide Directions" id="hideAddress">
     </div>
+    -->
     <section class="addressInput" id="addressInput">
         <div id="search">
+            <input id="pac-input" class="controls" type="text" placeholder="Search for a location">
+            <div id="type-selector" class="controls">
+            <input type="radio" name="type" id="changetype-all" checked="checked">
+            <label for="changetype-all">All</label>
+
+            <input type="radio" name="type" id="changetype-establishment">
+            <label for="changetype-establishment">Establishments</label>
+
+            <input type="radio" name="type" id="changetype-address">
+            <label for="changetype-address">Addresses</label>
+
+            <input type="radio" name="type" id="changetype-geocode">
+            <label for="changetype-geocode">Geocodes</label>
+        </div>
+            <!--
             <b>Search For Places Near Me:</b><br>
             <input type="text" name="Search" placeholder="Search" id="searchInput"><br><br>
             <input type="submit" name="submit" placeholder="Submit" id="submitSearch">
+            -->
         </div>
         <div class="addressTitle">
             Enter Here for Directions:
@@ -105,6 +123,7 @@
 </div>
 <!--This table system is just a placeholder. In reality, there could be more than 4 tolls around a person to choose from.-->
 <!--We just didn't know how to implement having an arbitrarily large number of tolls displayed via HTML.-->
+<!--
 <div id="tableEncap">
     <div id="show-hide-button-tolls">
         <input type="button" value="Hide Tolls" id="hideTolls">
@@ -121,7 +140,6 @@
         <div class="reloadTolls" id="refreshButton">
             <input type="button" value="Refresh">
         </div>
-        <!--<script>document.getElementById("refreshButton").addEventListener("click", refreshTable)</script>-->
         <div class="tollTitle">
             <p>Tolls Available:</p>
         </div>
@@ -170,6 +188,7 @@
         </table>
     </section>
 </div>
+-->
 <div class="tollSource">
     <footer>
         <a href="https://developer.here.com/platform-extensions/documentation/toll-cost">Source for Toll Data</a>
