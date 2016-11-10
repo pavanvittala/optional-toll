@@ -1,4 +1,26 @@
 <!DOCTYPE html>
+<head>
+    <!--Style-->
+    <link href="bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/informationvisual.css" rel="stylesheet" type="text/css"/>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script type="text/javascript" src="scripts/cookieOperations.js"></script>
+    <script type="text/javascript" src="scripts/lib.js"></script>
+    <script>
+    var config = {
+        apiKey: "AIzaSyAjbetBiCaHcNJbiWd3eBywO1jYufYVVxI",
+        authDomain: "optio-toll.firebaseapp.com",
+        databaseURL: "https://optio-toll.firebaseio.com",
+        storageBucket: "optio-toll.appspot.com",
+        messagingSenderId: "163118324324"
+    };
+    firebase.initializeApp(config);
+    </script>
+</head>
+<title>Information Visualization</title>
 <meta charset="utf-8">
 <style>
     .state{
@@ -49,42 +71,71 @@
     }
 </style>
 <body>
+<!--Navbar-->
+<div class="navbar-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    ]<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Optio-Toll</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <!--<li><a href="dataEntry.html">Create Account</a></li>-->
+                        <li><a href="map.html">Map</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="account.html">Account Information</a></li>
+                                <li><a href="#">Visualization</a></li>
+                                <li><a href="" id="logout_link">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div
+            </div>
+        </nav>
+    </div>
+</div>
 <div id="tooltip"></div><!-- div to hold tooltip. -->
 <svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
 <script src="uStates.js"></script> <!-- creates uStates. -->
 <script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--
 <script type="text/javascript" src="scripts/cookieOperations.js"></script>
 <script type="text/javascript" src="scripts/lib.js"></script>
+-->
 <script>
 
-    function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
-        return "<h4>"+n+"</h4><table>"+
-                "<tr><td>Val</td><td>"+(d.val)+"</td></tr>"+
-                "</table>";
-    }
+function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
+    return "<h4>"+n+"</h4><table>"+"<tr><td>Val</td><td>"+(d.val)+"</td></tr>"+"</table>";
+}
 
-    var sampleData ={};	/* Sample random data. */
-    /*
-     ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
-     "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
-     "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
-     "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
-     "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
-     .forEach(function(d){
-     var low=Math.round(100*Math.random());
-     var mid=Math.round(100*Math.random());
-     var high=Math.round(100*Math.random());
-     sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]),
-     avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#800026")(low/100)};
-     });
-     */
-    var email = readCookie("email");
-    if (readCookie("email") != null) {
+var sampleData ={};	/* Sample random data. */
+
+"use strict";
+var GoogleUsers = firebase.database().ref('GoogleUsers');
+
+var loggedIn;
+var uid;
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        console.log("A user is signed in");
+        loggedIn = true;
+        uid = user.uid;
         const databaseURL = "https://optio-toll.firebaseio.com";
-        var url = databaseURL + "/users/" + stripEmail(email) + "/user.json";
+        var url = databaseURL + "/GoogleUsers/" + uid + "/user.json";
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", url, false);
         xhttp.send();
@@ -142,6 +193,7 @@
         var WV = 0;
         var WI = 0;
         var WY = 0;
+        var LS = 0;
         for (var i = 0; i<locationsArray.length; i++) {
             var cityState = locationsArray[i].cityState;
             var state = cityState.substring(cityState.length-2, cityState.length);
@@ -245,6 +297,8 @@
                 WI++;
             } else if (state === "WY") {
                 WY++;
+            } else if (state === "LS") {
+                LS++;
             }
 
             console.log(state);
@@ -357,17 +411,24 @@
                         val = WI;
                     } else if (d === "WY") {
                         val = WY;
+                    } else if (d === "LS") {
+                        val = LS;
                     }
                     sampleData[d]={val:d3.min([val]), color:d3.interpolate("#ffffcc", "#800026")(val)};
                 });
 
     } else {
+        // User is signed out.
+        // FirebaseUI config.
+        console.log("No user is signed in");
         alert("No User is Logged In");
+        loggedIn = false;
     }
-    /* draw states on id #statesvg */
     uStates.draw("#statesvg", sampleData, tooltipHtml);
-
-    d3.select(self.frameElement).style("height", "600px");
+}), function(error) {
+    console.log("Printing an error now");
+    console.log(error);
+};
+d3.select(self.frameElement).style("height", "600px");
 </script>
-
 </body>
