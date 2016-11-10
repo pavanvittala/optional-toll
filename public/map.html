@@ -36,6 +36,7 @@
             margin-bottom: 5px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="navbar-wrapper" id="nav">
@@ -78,26 +79,51 @@
     </div>
 </div>
 <div id="map"></div>
-<script type="text/javascript" src="scripts/cookieOperations.js"></script>
-<script type="text/javascript" src="scripts/map.js"></script>
 <div id="addressEncap">
+    <!--
     <div id="show-hide-button-address">
         <input type="button" value="Hide Directions" id="hideAddress">
     </div>
+    -->
     <section class="addressInput" id="addressInput">
         <div id="search">
+            <i id="spinner" class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
+            <script>
+                $("#spinner").toggle();
+            </script>
+            <input id="pac-input" class="controls" type="text" placeholder="Search for a location">
+            <div id="type-selector" class="controls">
+            <input type="radio" name="type" id="changetype-all" checked="checked">
+            <label for="changetype-all">All</label>
+
+            <input type="radio" name="type" id="changetype-establishment">
+            <label for="changetype-establishment">Establishments</label>
+
+            <input type="radio" name="type" id="changetype-address">
+            <label for="changetype-address">Addresses</label>
+
+            <input type="radio" name="type" id="changetype-geocode">
+            <label for="changetype-geocode">Geocodes</label>
+        </div>
+            <!--
             <b>Search For Places Near Me:</b><br>
             <input type="text" name="Search" placeholder="Search" id="searchInput"><br><br>
             <input type="submit" name="submit" placeholder="Submit" id="submitSearch">
+            -->
         </div>
         <div class="addressTitle">
             Enter Here for Directions:
         </div>
         <form>
+            <input id="pac-input-dir-from" class="controls" type="text" placeholder="Enter from location">
+            <br>
+            <input id="pac-input-dir-to" class="controls" type="text" placeholder="Enter to location">
+            <!--
             From Address:<br>
             <input type="text" name="From Address" placeholder="From" id="fromAddress"><br><br>
             To Address:<br>
             <input type="text" name="To Address" placeholder="To" id="toAddress">
+            -->
         </form>
         <br>
         <input type="submit" name="submit" placeholder="Submit" id="submitDirections">
@@ -105,6 +131,7 @@
 </div>
 <!--This table system is just a placeholder. In reality, there could be more than 4 tolls around a person to choose from.-->
 <!--We just didn't know how to implement having an arbitrarily large number of tolls displayed via HTML.-->
+<!--
 <div id="tableEncap">
     <div id="show-hide-button-tolls">
         <input type="button" value="Hide Tolls" id="hideTolls">
@@ -121,7 +148,6 @@
         <div class="reloadTolls" id="refreshButton">
             <input type="button" value="Refresh">
         </div>
-        <!--<script>document.getElementById("refreshButton").addEventListener("click", refreshTable)</script>-->
         <div class="tollTitle">
             <p>Tolls Available:</p>
         </div>
@@ -170,6 +196,9 @@
         </table>
     </section>
 </div>
+-->
+<script type="text/javascript" src="scripts/cookieOperations.js"></script>
+<script type="text/javascript" src="scripts/map.js"></script>
 <div class="tollSource">
     <footer>
         <a href="https://developer.here.com/platform-extensions/documentation/toll-cost">Source for Toll Data</a>
