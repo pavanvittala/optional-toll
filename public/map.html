@@ -36,6 +36,7 @@
             margin-bottom: 5px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="navbar-wrapper" id="nav">
@@ -78,8 +79,6 @@
     </div>
 </div>
 <div id="map"></div>
-<script type="text/javascript" src="scripts/cookieOperations.js"></script>
-<script type="text/javascript" src="scripts/map.js"></script>
 <div id="addressEncap">
     <!--
     <div id="show-hide-button-address">
@@ -88,6 +87,10 @@
     -->
     <section class="addressInput" id="addressInput">
         <div id="search">
+            <i id="spinner" class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
+            <script>
+                $("#spinner").toggle();
+            </script>
             <input id="pac-input" class="controls" type="text" placeholder="Search for a location">
             <div id="type-selector" class="controls">
             <input type="radio" name="type" id="changetype-all" checked="checked">
@@ -112,10 +115,15 @@
             Enter Here for Directions:
         </div>
         <form>
+            <input id="pac-input-dir-from" class="controls" type="text" placeholder="Enter from location">
+            <br>
+            <input id="pac-input-dir-to" class="controls" type="text" placeholder="Enter to location">
+            <!--
             From Address:<br>
             <input type="text" name="From Address" placeholder="From" id="fromAddress"><br><br>
             To Address:<br>
             <input type="text" name="To Address" placeholder="To" id="toAddress">
+            -->
         </form>
         <br>
         <input type="submit" name="submit" placeholder="Submit" id="submitDirections">
@@ -189,6 +197,8 @@
     </section>
 </div>
 -->
+<script type="text/javascript" src="scripts/cookieOperations.js"></script>
+<script type="text/javascript" src="scripts/map.js"></script>
 <div class="tollSource">
     <footer>
         <a href="https://developer.here.com/platform-extensions/documentation/toll-cost">Source for Toll Data</a>
