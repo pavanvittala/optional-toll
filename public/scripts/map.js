@@ -62,7 +62,7 @@ function initMap() {
           if (!place.geometry) {
             // User entered the name of a Place that was not suggested and
             // pressed the Enter key, or the Place Details request failed.
-            //window.alert("No details available for input: '" + place.name + "'");
+            // My original implementation of search is called in this case
             clearMarkers();
             if (directionsDisplay != null) {
                 directionsDisplay.set('directions', null);
@@ -93,8 +93,6 @@ function initMap() {
                     service.textSearch(request, callback);
                     infoWindow.setPosition(pos);
                     infoWindow.setContent('You are here');  //Put infopane on current location
-                    map.setCenter(pos); //Center on the current position
-                    map.setZoom(15);    //Zoom appropriately
                     $('#spinner').toggle();
                 }, function() { //Handle location error
                     handleLocationError(true, infoWindow, map.getCenter());
@@ -113,13 +111,15 @@ function initMap() {
             map.setCenter(place.geometry.location);
             map.setZoom(17);  // Why 17? Because it looks good.
           }
-          marker.setIcon(/** @type {google.maps.Icon} */({
+          /*
+          marker.setIcon(({
             url: place.icon,
             size: new google.maps.Size(71, 71),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(17, 34),
             scaledSize: new google.maps.Size(35, 35)
           }));
+            */
           marker.setPosition(place.geometry.location);
           marker.setVisible(true);
           var address = '';
@@ -309,6 +309,12 @@ function callback(results, status) {
             insertInfoWindow(marker, description);
         }
     }
+    //Code for setting zoom after all the markers have been added to the map and the markersArray
+    var bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i<markersArray.length; i++) {
+        bounds.extend(markersArray[i].getPosition());
+    }
+    map.fitBounds(bounds);
 }
 
 function insertInfoWindow(marker, message) {
