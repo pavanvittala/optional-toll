@@ -1,6 +1,5 @@
 <!--Pavan Vittala-->
 <!--This HTML document is the page where the main part of our project will reside. This is the page with the map-->
-<!--and also the page with the information about what tolls are near you.-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +15,6 @@
     firebase.initializeApp(config);
     </script>
     <title>Better Toll System for Google Maps</title>
-    <!--<link href="styles/carousel.css" rel="stylesheet">-->
     <link href="styles/map.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
@@ -56,7 +54,6 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="login.html">Login</a></li>
-                        <!--<li><a href="dataEntry.html">Create Account</a></li>-->
                         <li class ="active"><a href="map.html">Map</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
@@ -64,11 +61,6 @@
                                 <li><a href="account.html">Account Information</a></li>
                                 <li><a href="informationvisual.html">Visualization</a></li>
                                 <li><a href="" id="logout_link">Logout</a></li>
-                                <!--<li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>-->
                             </ul>
                         </li>
                     </ul>
@@ -80,11 +72,6 @@
 </div>
 <div id="map"></div>
 <div id="addressEncap">
-    <!--
-    <div id="show-hide-button-address">
-        <input type="button" value="Hide Directions" id="hideAddress">
-    </div>
-    -->
     <section class="addressInput" id="addressInput">
         <div id="search">
             <i id="spinner" class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
@@ -105,11 +92,6 @@
             <input type="radio" name="type" id="changetype-geocode">
             <label for="changetype-geocode">Geocodes</label>
         </div>
-            <!--
-            <b>Search For Places Near Me:</b><br>
-            <input type="text" name="Search" placeholder="Search" id="searchInput"><br><br>
-            <input type="submit" name="submit" placeholder="Submit" id="submitSearch">
-            -->
         </div>
         <div class="addressTitle">
             Enter Here for Directions:
@@ -118,92 +100,13 @@
             <input id="pac-input-dir-from" class="controls" type="text" placeholder="Enter from location">
             <br>
             <input id="pac-input-dir-to" class="controls" type="text" placeholder="Enter to location">
-            <!--
-            From Address:<br>
-            <input type="text" name="From Address" placeholder="From" id="fromAddress"><br><br>
-            To Address:<br>
-            <input type="text" name="To Address" placeholder="To" id="toAddress">
-            -->
         </form>
         <br>
         <input type="submit" name="submit" placeholder="Submit" id="submitDirections">
     </section>
 </div>
-<!--This table system is just a placeholder. In reality, there could be more than 4 tolls around a person to choose from.-->
-<!--We just didn't know how to implement having an arbitrarily large number of tolls displayed via HTML.-->
-<!--
-<div id="tableEncap">
-    <div id="show-hide-button-tolls">
-        <input type="button" value="Hide Tolls" id="hideTolls">
-    </div>
-    <section class="tableOfTolls" id="tableOfTolls" data-default=4>
-        <div class="numTollsVisible">
-            Number of Tolls Visible
-            <input type="number" name="quantity" min="1" max="4" value="4"  id="numTolls">
-        </div>
-        <div class="tollCost">
-            Toll Cost Threshold
-            <input type="text" placeholder="Cost" pattern="[0-9]+">
-        </div>
-        <div class="reloadTolls" id="refreshButton">
-            <input type="button" value="Refresh">
-        </div>
-        <div class="tollTitle">
-            <p>Tolls Available:</p>
-        </div>
-        <table border="1" width="500" height="250" id="tolltable">
-            <tr>
-                <th>Toll</th>
-                <th>Price</th>
-                <th>Use Toll</th>
-            </tr>
-            <tr>
-                <td>Placeholder</td>
-                <td>Placeholder</td>
-                <td>
-                    <div class="tollTableCheckbox">
-                        <input type="checkbox" checked="checked"/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Placeholder</td>
-                <td>Placeholder</td>
-                <td>
-                    <div class="tollTableCheckbox">
-                        <input type="checkbox" checked="checked"/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Placeholder</td>
-                <td>Placeholder</td>
-                <td>
-                    <div class="tollTableCheckbox">
-                        <input type="checkbox" checked="checked"/>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Placeholder</td>
-                <td>Placeholder</td>
-                <td>
-                    <div class="tollTableCheckbox">
-                        <input type="checkbox" checked="checked"/>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </section>
-</div>
--->
 <script type="text/javascript" src="scripts/cookieOperations.js"></script>
 <script type="text/javascript" src="scripts/map.js"></script>
-<div class="tollSource">
-    <footer>
-        <a href="https://developer.here.com/platform-extensions/documentation/toll-cost">Source for Toll Data</a>
-    </footer>
-</div>
 <div class="contactInfo">
     <footer>
         Developer Contact Info:<br>
