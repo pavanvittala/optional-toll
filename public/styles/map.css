@@ -146,15 +146,6 @@ footer:a:hover {
     color: lightgreen;
 }
 
-.tollSource {
-    background-color: whitesmoke;
-	position: fixed;
-	bottom: 0;
-    left: 0;
-    padding-bottom: 5px;
-    padding-left: 5px;
-}
-
 .contactInfo {
 	position: fixed;
     bottom: 0;
